@@ -30,6 +30,7 @@ public class BaseTest {
 		 System.out.println("Create the browser ");
 		 System.setProperty("webdriver.chrome.drive", "C:\\Users\\rabiu\\OneDrive\\Documents\\ChromeDriver\\chromedriver.exe");
 	        this.driver=new ChromeDriver();
+	        
 	        driver.manage().window().maximize();
 	        driver.get("http://the-internet.herokuapp.com/");
 	        String TitleName=driver.getTitle();
