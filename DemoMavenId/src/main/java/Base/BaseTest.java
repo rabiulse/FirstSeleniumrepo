@@ -113,6 +113,7 @@ public class BaseTest {
 		/** Get title of current page */
 		public String getCurrentPageTitle() {
 			return driver.getTitle();
+			
 		}
 		
 		public void switchToframe()
