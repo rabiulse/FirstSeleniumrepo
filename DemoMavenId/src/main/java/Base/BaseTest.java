@@ -126,6 +126,7 @@ public class BaseTest {
 			//log.info("Pressing " + key.name() + " using Actions class");
 			Actions action = new Actions(driver);
 			action.sendKeys(key).build().perform();
+			
 		}
 	
 }
