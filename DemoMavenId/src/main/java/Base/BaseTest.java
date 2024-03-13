@@ -33,6 +33,7 @@ public class BaseTest {
 	        driver.manage().window().maximize();
 	        
 	        driver.get("http://the-internet.herokuapp.com/");
+	        
 	        String TitleName=driver.getTitle();
 	    	System.out.println("The title name: " + TitleName);
 	    	Assert.assertEquals(TitleName, "The Internet");
