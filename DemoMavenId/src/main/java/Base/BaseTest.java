@@ -115,6 +115,7 @@ public class BaseTest {
 		public String getCurrentPageTitle() {
 			return driver.getTitle();
 			
+			
 		}
 		
 		public void switchToframe()
