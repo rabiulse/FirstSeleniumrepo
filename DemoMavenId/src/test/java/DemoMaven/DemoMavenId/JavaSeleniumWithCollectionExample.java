@@ -42,10 +42,9 @@ class JavaSeleniumWithCollectionExample {
    {
 	   System.out.println("Starting the Test for : ");
 	   List<WebElement> mutiplewebelement = driver.findElements(By.xpath("//*[contains(text(),'ITI')]/parent::td/ancestor :: tr/preceding-sibling::tr"));
-	  // List <WebElement> element12 = new ArrayList<WebElement>();
-	   //element12=driver.findElements(By.xpath("//*[contains(text(),'IIFL Finance')]/parent::td/ancestor :: tr/preceding-sibling::tr"));
+
 	   Iterator <WebElement> itr = mutiplewebelement.iterator();
-	  // Iterator <WebElement> itr = element12.iterator();
+	
 	   String value="";
 	   
 	   while (itr.hasNext())
