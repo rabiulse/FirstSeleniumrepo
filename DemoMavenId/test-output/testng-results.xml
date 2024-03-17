@@ -1,29 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-16T14:09:20 IST" name="SmokeTestSuite" finished-at="2024-03-16T14:10:11 IST" duration-ms="50476">
+  <suite started-at="2024-03-16T21:41:41 IST" name="SmokeTestSuite" finished-at="2024-03-16T21:42:18 IST" duration-ms="36770">
     <groups>
     </groups>
-    <test started-at="2024-03-16T14:09:20 IST" name="IframeTest" finished-at="2024-03-16T14:09:37 IST" duration-ms="16656">
+    <test started-at="2024-03-16T21:41:41 IST" name="IframeTest" finished-at="2024-03-16T21:41:50 IST" duration-ms="8647">
       <class name="DemoMaven.DemoMavenId.IframeTest">
-        <test-method signature="IframeTest()[pri:0, instance:DemoMaven.DemoMavenId.IframeTest@7ef82753]" started-at="2024-03-16T14:09:20 IST" name="IframeTest" finished-at="2024-03-16T14:09:37 IST" duration-ms="16286" status="PASS">
+        <test-method signature="IframeTest()[pri:0, instance:DemoMaven.DemoMavenId.IframeTest@7ef82753]" started-at="2024-03-16T21:41:42 IST" name="IframeTest" finished-at="2024-03-16T21:41:50 IST" duration-ms="8319" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IframeTest -->
       </class> <!-- DemoMaven.DemoMavenId.IframeTest -->
     </test> <!-- IframeTest -->
-    <test started-at="2024-03-16T14:09:37 IST" name="multipleWindows" finished-at="2024-03-16T14:09:45 IST" duration-ms="8384">
+    <test started-at="2024-03-16T21:41:50 IST" name="multipleWindows" finished-at="2024-03-16T21:41:56 IST" duration-ms="6095">
       <class name="DemoMaven.DemoMavenId.multipleWindows">
-        <test-method signature="MultipleWindows()[pri:0, instance:DemoMaven.DemoMavenId.multipleWindows@6d60fe40]" started-at="2024-03-16T14:09:37 IST" name="MultipleWindows" finished-at="2024-03-16T14:09:45 IST" duration-ms="8383" status="PASS">
+        <test-method signature="MultipleWindows()[pri:0, instance:DemoMaven.DemoMavenId.multipleWindows@6d60fe40]" started-at="2024-03-16T21:41:50 IST" name="MultipleWindows" finished-at="2024-03-16T21:41:56 IST" duration-ms="6064" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MultipleWindows -->
       </class> <!-- DemoMaven.DemoMavenId.multipleWindows -->
     </test> <!-- multipleWindows -->
-    <test started-at="2024-03-16T14:09:45 IST" name="NegativeLogInTests" finished-at="2024-03-16T14:10:11 IST" duration-ms="25352">
+    <test started-at="2024-03-16T21:41:56 IST" name="keyPressTest" finished-at="2024-03-16T21:42:02 IST" duration-ms="6030">
+      <class name="DemoMaven.DemoMavenId.keyPressTest">
+        <test-method signature="KeyPressTest()[pri:0, instance:DemoMaven.DemoMavenId.keyPressTest@1972e513]" started-at="2024-03-16T21:41:56 IST" name="KeyPressTest" finished-at="2024-03-16T21:42:02 IST" duration-ms="6028" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- KeyPressTest -->
+      </class> <!-- DemoMaven.DemoMavenId.keyPressTest -->
+    </test> <!-- keyPressTest -->
+    <test started-at="2024-03-16T21:42:02 IST" name="NegativeLogInTests" finished-at="2024-03-16T21:42:18 IST" duration-ms="15950">
       <class name="DemoMaven.DemoMavenId.NegativeLogInTests">
-        <test-method signature="negativeLogInTest(java.util.Map)[pri:1, instance:DemoMaven.DemoMavenId.NegativeLogInTests@514646ef]" started-at="2024-03-16T14:09:45 IST" name="negativeLogInTest" data-provider="csvReader" finished-at="2024-03-16T14:10:02 IST" duration-ms="16577" status="PASS">
+        <test-method signature="negativeLogInTest(java.util.Map)[pri:1, instance:DemoMaven.DemoMavenId.NegativeLogInTests@433defed]" started-at="2024-03-16T21:42:02 IST" name="negativeLogInTest" data-provider="csvReader" finished-at="2024-03-16T21:42:10 IST" duration-ms="8147" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -34,7 +42,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- negativeLogInTest -->
-        <test-method signature="negativeLogInTest(java.util.Map)[pri:1, instance:DemoMaven.DemoMavenId.NegativeLogInTests@514646ef]" started-at="2024-03-16T14:10:02 IST" name="negativeLogInTest" data-provider="csvReader" finished-at="2024-03-16T14:10:11 IST" duration-ms="8760" status="PASS">
+        <test-method signature="negativeLogInTest(java.util.Map)[pri:1, instance:DemoMaven.DemoMavenId.NegativeLogInTests@433defed]" started-at="2024-03-16T21:42:10 IST" name="negativeLogInTest" data-provider="csvReader" finished-at="2024-03-16T21:42:18 IST" duration-ms="7792" status="PASS">
           <params>
             <param index="0">
               <value>

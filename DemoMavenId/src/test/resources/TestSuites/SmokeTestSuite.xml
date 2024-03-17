@@ -2,10 +2,10 @@
 
 <suite name="SmokeTestSuite" verbose="1">
 
-	<listeners>
-		<listener class-name="Base.TestListener"></listener>
+<listeners>
+		<listener class-name="Base.TestListner"></listener>
 	</listeners>
-	
+
 	<test name="IframeTest">
 		<classes>
 			<class name="DemoMaven.DemoMavenId.IframeTest"/>
@@ -17,6 +17,13 @@
 			<class name="DemoMaven.DemoMavenId.multipleWindows"/>
 		</classes>
 	</test>	
+	
+		<test name="keyPressTest">
+		<classes>
+			<class name="DemoMaven.DemoMavenId.keyPressTest"/>
+		</classes>
+	</test>	
+	
 	
 		<test name="NegativeLogInTests">
 		<classes>

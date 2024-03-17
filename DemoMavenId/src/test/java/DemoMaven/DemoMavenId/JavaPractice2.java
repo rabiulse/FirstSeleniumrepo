@@ -13,8 +13,10 @@ class JavaPractice2 {
 	{
 		String input="Rabiul";
 		reverseString();
+		removewhiteSpace();
 	}
 	
+	// String reverse Coding in java
 	private static void reverseString()
 	{
 
@@ -28,5 +30,12 @@ class JavaPractice2 {
 			System.out.print(try1[i]);
 		
 	}
+	// remove the white space from given String:
+	private static void removewhiteSpace (){
+		String str = " Java Interview Questions ";
+		str = str.replaceAll("\\s", "");
+		System.out.println("");
+		System.out.println(str);
+		}
 	
 }
