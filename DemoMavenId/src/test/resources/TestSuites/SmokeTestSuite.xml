@@ -23,8 +23,7 @@
 			<class name="DemoMaven.DemoMavenId.keyPressTest"/>
 		</classes>
 	</test>	
-	
-	
+		
 		<test name="NegativeLogInTests">
 		<classes>
 			<class name="DemoMaven.DemoMavenId.NegativeLogInTests"/>
