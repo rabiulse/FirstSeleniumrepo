@@ -13,4 +13,16 @@
 		</classes>
   </test> <!-- Test -->
   
+   <test thread-count="1" name="fileUploadTest">
+	  <classes>
+			<class name="DemoMaven.DemoMavenId.fileUploadTest"/>
+		</classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="1" name="NegativeLogInTests">
+	  <classes>
+			<class name="DemoMaven.DemoMavenId.NegativeLogInTests"/>
+		</classes>
+  </test> <!-- Test -->
+  
 </suite> <!-- Suite -->
