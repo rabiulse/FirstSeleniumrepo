@@ -1,25 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-18T13:13:12 IST" name="Suite" finished-at="2024-03-18T13:13:25 IST" duration-ms="13121">
+  <suite started-at="2024-03-18T13:26:34 IST" name="SmokeTestSuite" finished-at="2024-03-18T13:27:14 IST" duration-ms="40264">
     <groups>
     </groups>
-    <test started-at="2024-03-18T13:13:12 IST" name="IframeTest" finished-at="2024-03-18T13:13:20 IST" duration-ms="7492">
+    <test started-at="2024-03-18T13:26:34 IST" name="IframeTest" finished-at="2024-03-18T13:26:41 IST" duration-ms="6997">
       <class name="DemoMaven.DemoMavenId.IframeTest">
-        <test-method signature="IframeTest()[pri:0, instance:DemoMaven.DemoMavenId.IframeTest@7ef82753]" started-at="2024-03-18T13:13:12 IST" name="IframeTest" finished-at="2024-03-18T13:13:20 IST" duration-ms="7453" status="PASS">
+        <test-method signature="IframeTest()[pri:0, instance:DemoMaven.DemoMavenId.IframeTest@7ef82753]" started-at="2024-03-18T13:26:34 IST" name="IframeTest" finished-at="2024-03-18T13:26:41 IST" duration-ms="6648" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IframeTest -->
       </class> <!-- DemoMaven.DemoMavenId.IframeTest -->
     </test> <!-- IframeTest -->
-    <test started-at="2024-03-18T13:13:20 IST" name="keyPressTest" finished-at="2024-03-18T13:13:25 IST" duration-ms="5551">
+    <test started-at="2024-03-18T13:26:41 IST" name="multipleWindows" finished-at="2024-03-18T13:26:47 IST" duration-ms="5853">
+      <class name="DemoMaven.DemoMavenId.multipleWindows">
+        <test-method signature="MultipleWindows()[pri:0, instance:DemoMaven.DemoMavenId.multipleWindows@6d60fe40]" started-at="2024-03-18T13:26:41 IST" name="MultipleWindows" finished-at="2024-03-18T13:26:47 IST" duration-ms="5853" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MultipleWindows -->
+      </class> <!-- DemoMaven.DemoMavenId.multipleWindows -->
+    </test> <!-- multipleWindows -->
+    <test started-at="2024-03-18T13:26:47 IST" name="keyPressTest" finished-at="2024-03-18T13:26:52 IST" duration-ms="5459">
       <class name="DemoMaven.DemoMavenId.keyPressTest">
-        <test-method signature="KeyPressTest()[pri:0, instance:DemoMaven.DemoMavenId.keyPressTest@792b749c]" started-at="2024-03-18T13:13:20 IST" name="KeyPressTest" finished-at="2024-03-18T13:13:25 IST" duration-ms="5551" status="PASS">
+        <test-method signature="KeyPressTest()[pri:0, instance:DemoMaven.DemoMavenId.keyPressTest@1972e513]" started-at="2024-03-18T13:26:47 IST" name="KeyPressTest" finished-at="2024-03-18T13:26:52 IST" duration-ms="5451" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- KeyPressTest -->
       </class> <!-- DemoMaven.DemoMavenId.keyPressTest -->
     </test> <!-- keyPressTest -->
-  </suite> <!-- Suite -->
+    <test started-at="2024-03-18T13:26:52 IST" name="fileUploadTest" finished-at="2024-03-18T13:26:58 IST" duration-ms="5714">
+      <class name="DemoMaven.DemoMavenId.fileUploadTest">
+        <test-method signature="fileUploadTest()[pri:0, instance:DemoMaven.DemoMavenId.fileUploadTest@2a693f59]" started-at="2024-03-18T13:26:52 IST" name="fileUploadTest" finished-at="2024-03-18T13:26:58 IST" duration-ms="5714" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fileUploadTest -->
+      </class> <!-- DemoMaven.DemoMavenId.fileUploadTest -->
+    </test> <!-- fileUploadTest -->
+    <test started-at="2024-03-18T13:26:58 IST" name="NegativeLogInTests" finished-at="2024-03-18T13:27:14 IST" duration-ms="16225">
+      <class name="DemoMaven.DemoMavenId.NegativeLogInTests">
+        <test-method signature="negativeLogInTest(java.util.Map)[pri:1, instance:DemoMaven.DemoMavenId.NegativeLogInTests@28dcca0c]" started-at="2024-03-18T13:26:58 IST" name="negativeLogInTest" data-provider="csvReader" finished-at="2024-03-18T13:27:06 IST" duration-ms="8239" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{no=1, description=incorrect username, password=SuperSecretPassword!, expectedMessage=Your username is invalid!, username=incorrectUsername}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeLogInTest -->
+        <test-method signature="negativeLogInTest(java.util.Map)[pri:1, instance:DemoMaven.DemoMavenId.NegativeLogInTests@28dcca0c]" started-at="2024-03-18T13:27:06 IST" name="negativeLogInTest" data-provider="csvReader" finished-at="2024-03-18T13:27:14 IST" duration-ms="7971" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{no=2, description=incorrect password, password=incorrectPassword, expectedMessage=Your password is invalid!, username=tomsmith}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeLogInTest -->
+      </class> <!-- DemoMaven.DemoMavenId.NegativeLogInTests -->
+    </test> <!-- NegativeLogInTests -->
+  </suite> <!-- SmokeTestSuite -->
 </testng-results>
