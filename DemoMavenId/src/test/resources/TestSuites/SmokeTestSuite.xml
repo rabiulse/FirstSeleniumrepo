@@ -23,6 +23,15 @@
 			<class name="DemoMaven.DemoMavenId.keyPressTest"/>
 		</classes>
 	</test>	
+	
+		<test name="fileUploadTest">
+		<classes>
+			<class name="DemoMaven.DemoMavenId.fileUploadTest"/>
+		</classes>
+	</test>	
+		
+	
+	
 		
 		<test name="NegativeLogInTests">
 		<classes>
