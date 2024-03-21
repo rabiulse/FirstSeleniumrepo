@@ -1,59 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-18T21:41:46 IST" name="Suite" finished-at="2024-03-18T21:42:39 IST" duration-ms="53494">
+  <suite started-at="2024-03-21T08:36:38 IST" name="Default suite" finished-at="2024-03-21T08:36:46 IST" duration-ms="7696">
     <groups>
     </groups>
-    <test started-at="2024-03-18T21:41:46 IST" name="IframeTest" finished-at="2024-03-18T21:41:55 IST" duration-ms="8625">
-      <class name="DemoMaven.DemoMavenId.IframeTest">
-        <test-method signature="IframeTest()[pri:0, instance:DemoMaven.DemoMavenId.IframeTest@7ef82753]" started-at="2024-03-18T21:41:46 IST" name="IframeTest" finished-at="2024-03-18T21:41:55 IST" duration-ms="8583" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- IframeTest -->
-      </class> <!-- DemoMaven.DemoMavenId.IframeTest -->
-    </test> <!-- IframeTest -->
-    <test started-at="2024-03-18T21:41:55 IST" name="keyPressTest" finished-at="2024-03-18T21:42:00 IST" duration-ms="5664">
+    <test started-at="2024-03-21T08:36:38 IST" name="Default test" finished-at="2024-03-21T08:36:46 IST" duration-ms="7696">
       <class name="DemoMaven.DemoMavenId.keyPressTest">
-        <test-method signature="KeyPressTest()[pri:0, instance:DemoMaven.DemoMavenId.keyPressTest@792b749c]" started-at="2024-03-18T21:41:55 IST" name="KeyPressTest" finished-at="2024-03-18T21:42:00 IST" duration-ms="5660" status="PASS">
+        <test-method signature="KeyPressTest()[pri:0, instance:DemoMaven.DemoMavenId.keyPressTest@78e4deb0]" started-at="2024-03-21T08:36:38 IST" name="KeyPressTest" finished-at="2024-03-21T08:36:46 IST" duration-ms="7668" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- KeyPressTest -->
       </class> <!-- DemoMaven.DemoMavenId.keyPressTest -->
-    </test> <!-- keyPressTest -->
-    <test started-at="2024-03-18T21:42:00 IST" name="fileUploadTest" finished-at="2024-03-18T21:42:06 IST" duration-ms="5828">
-      <class name="DemoMaven.DemoMavenId.fileUploadTest">
-        <test-method signature="fileUploadTest()[pri:0, instance:DemoMaven.DemoMavenId.fileUploadTest@302c971f]" started-at="2024-03-18T21:42:00 IST" name="fileUploadTest" finished-at="2024-03-18T21:42:06 IST" duration-ms="5826" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fileUploadTest -->
-      </class> <!-- DemoMaven.DemoMavenId.fileUploadTest -->
-    </test> <!-- fileUploadTest -->
-    <test started-at="2024-03-18T21:42:06 IST" name="NegativeLogInTests" finished-at="2024-03-18T21:42:39 IST" duration-ms="33308">
-      <class name="DemoMaven.DemoMavenId.NegativeLogInTests">
-        <test-method signature="negativeLogInTest(java.util.Map)[pri:1, instance:DemoMaven.DemoMavenId.NegativeLogInTests@548a24a]" started-at="2024-03-18T21:42:06 IST" name="negativeLogInTest" data-provider="csvReader" finished-at="2024-03-18T21:42:26 IST" duration-ms="19886" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{no=1, description=incorrect username, password=SuperSecretPassword!, expectedMessage=Your username is invalid!, username=incorrectUsername}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- negativeLogInTest -->
-        <test-method signature="negativeLogInTest(java.util.Map)[pri:1, instance:DemoMaven.DemoMavenId.NegativeLogInTests@548a24a]" started-at="2024-03-18T21:42:26 IST" name="negativeLogInTest" data-provider="csvReader" finished-at="2024-03-18T21:42:39 IST" duration-ms="13409" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{no=2, description=incorrect password, password=incorrectPassword, expectedMessage=Your password is invalid!, username=tomsmith}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- negativeLogInTest -->
-      </class> <!-- DemoMaven.DemoMavenId.NegativeLogInTests -->
-    </test> <!-- NegativeLogInTests -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

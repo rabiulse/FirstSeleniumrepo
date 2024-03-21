@@ -24,6 +24,7 @@ public class CsvDataProviders {
 				+ "dataproviders" + File.separator + method.getDeclaringClass().getSimpleName() + File.separator
 				+ method.getName() + ".csv";
 		File file = new File(pathname);
+
 		try {
 			CSVReader reader = new CSVReader(new FileReader(file));
 			String[] keys = reader.readNext();

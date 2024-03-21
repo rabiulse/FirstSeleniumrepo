@@ -87,15 +87,19 @@ public class BaseTest {
 	public void switchToWindowWithTitle(String getCurrentPageTitle) {
 		// Switching to new window
 		String firstWindow = driver.getWindowHandle();
+		System.out.println("parent window handle: " + firstWindow);
 
-		Set<String> allWindows = driver.getWindowHandles();
-		Iterator<String> windowsIterator = allWindows.iterator();
+		Set<String> allWindows = driver.getWindowHandles();// get the all window handle in the current open browser.
+		Iterator<String> windowsIterator = allWindows.iterator();//
+		System.out.println("parent window handle: " + allWindows);
 
 		while (windowsIterator.hasNext()) {
 			String windowHandle = windowsIterator.next().toString();
+
 			if (!windowHandle.equals(firstWindow)) {
 				driver.switchTo().window(windowHandle);
 				if (getCurrentPageTitle().equals(getCurrentPageTitle)) {
+					System.out.println("getCurrentPageTitle is : " + getCurrentPageTitle);
 					break;
 				}
 			}

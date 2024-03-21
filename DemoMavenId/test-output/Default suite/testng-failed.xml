@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="DemoMaven.DemoMavenId.JSErrorTests">
+      <class name="DemoMaven.DemoMavenId.keyPressTest">
         <methods>
-          <include name="jsErrorTest"/>
+          <include name="KeyPressTest"/>
         </methods>
-      </class> <!-- DemoMaven.DemoMavenId.JSErrorTests -->
+      </class> <!-- DemoMaven.DemoMavenId.keyPressTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
