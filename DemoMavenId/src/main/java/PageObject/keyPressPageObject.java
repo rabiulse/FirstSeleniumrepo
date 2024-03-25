@@ -3,11 +3,26 @@ package PageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import Base.BaseTest;
 
 public class keyPressPageObject extends BaseTest {
+
+	public keyPressPageObject() {
+		PageFactory.initElements(driver, this);
+	}
+
+	@FindBy(xpath = "//a[normalize-space()='Key Presses']")
+	private WebElement OpenKeyPress1;
+
+	public void openKeyPress1() {
+		System.out.println("Click on OpenKeyPress");
+		OpenKeyPress1.click();
+
+	}
 
 	public void openKeyPress() {
 		System.out.println("Click on OpenKeyPress");

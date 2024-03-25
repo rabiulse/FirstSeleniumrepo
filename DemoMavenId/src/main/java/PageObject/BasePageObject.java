@@ -11,14 +11,14 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import Base.Log;
 
 public class BasePageObject {
 
@@ -47,13 +47,13 @@ public class BasePageObject {
 
 	/** Click on element with given locator when its visible */
 	protected void click(By locator) {
-		//waitForVisibilityOf(locator, 5);
+		// waitForVisibilityOf(locator, 5);
 		find(locator).click();
 	}
 
 	/** Type given text into element with given locator */
 	protected void type(String text, By locator) {
-		//waitForVisibilityOf(locator, 5);
+		// waitForVisibilityOf(locator, 5);
 		find(locator).sendKeys(text);
 	}
 
@@ -75,34 +75,37 @@ public class BasePageObject {
 	/**
 	 * Wait for specific ExpectedCondition for the given amount of time in seconds
 	 */
-	//private void waitFor(ExpectedCondition<WebElement> condition, Duration timeOutInSeconds) {
-	//	timeOutInSeconds = timeOutInSeconds != null ? timeOutInSeconds = ;
-		//WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
-		//wait.until(condition);
-	//}
+	// private void waitFor(ExpectedCondition<WebElement> condition, Duration
+	// timeOutInSeconds) {
+	// timeOutInSeconds = timeOutInSeconds != null ? timeOutInSeconds = ;
+	// WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
+	// wait.until(condition);
+	// }
 
 	/**
 	 * Wait for given number of seconds for element with given locator to be visible
 	 * on the page
 	 */
-	public static boolean waitForUntilVisible(WebDriver driver, Integer time, By by ) {
-	    WebDriverWait wait = new WebDriverWait(driver,  Duration.ofSeconds(time));
+	public static boolean waitForUntilVisible(WebDriver driver, Integer time, By by) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(time));
 
-	    try {
-	        wait.until( ExpectedConditions.presenceOfElementLocated(by) ); 
-	    }catch(NoSuchElementException e) {
-	        return false;
-	    }catch (TimeoutException e) {
-	        return false;
-	    }
-	    return true;
+		try {
+			wait.until(ExpectedConditions.presenceOfElementLocated(by));
+		} catch (NoSuchElementException e) {
+			return false;
+		} catch (TimeoutException e) {
+			return false;
+		}
+		return true;
 	}
 
 	/** Wait for alert present and then switch to it */
 	protected Alert switchToAlert() {
-		//WebDriverWait wait = new WebDriverWait(driver, 5);
-		//wait.until(ExpectedConditions.alertIsPresent());
+		// WebDriverWait wait = new WebDriverWait(driver, 5);
+		// wait.until(ExpectedConditions.alertIsPresent());
+		Log.info("My Account link element found");
 		return driver.switchTo().alert();
+
 	}
 
 	public void switchToWindowWithTitle(String expectedTitle) {

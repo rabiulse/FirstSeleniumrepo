@@ -1,6 +1,5 @@
 package Base;
 
-import org.testng.ITestListener;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.ITestContext;
@@ -8,16 +7,16 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 public class TestListner implements ITestListener {
-	
+
 	Logger log;
 	String testName;
 	String testMethodName;
-	
+
 	@Override
 	public void onTestStart(ITestResult result) {
-		this.testMethodName = result.getMethod().getMethodName();
-		log.info("[Starting " + testMethodName + "]");
+		System.out.println("Test Started successfully: ");
 	}
+
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		log.info("[Test " + testMethodName + " passed]");

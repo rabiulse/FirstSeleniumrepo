@@ -1,6 +1,9 @@
 package DemoMaven.DemoMavenId;
 
+import java.io.IOException;
+
 import org.openqa.selenium.Keys;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.Test;
 
 import Base.BaseTest;
@@ -9,7 +12,7 @@ import PageObject.keyPressPageObject;
 public class keyPressTest extends keyPressPageObject {
 
 	@Test
-	public void KeyPressTest() {
+	public void KeyPressTest() throws IOException {
 
 		System.out.println("Starting Test ");
 		BaseTest base = new BaseTest();
@@ -24,4 +27,10 @@ public class keyPressTest extends keyPressPageObject {
 		keypress.getResultText();
 		base.TearDown();
 	}
+
+	@AfterSuite
+	public void afterSuite() {
+		System.out.println("After Suits it is executed: ");
+	}
+
 }

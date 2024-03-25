@@ -1,5 +1,6 @@
 package DemoMaven.DemoMavenId;
 
+import java.io.IOException;
 import java.util.Map;
 
 import org.testng.Assert;
@@ -11,7 +12,7 @@ import PageObject.LoginPageObject;
 public class NegativeLogInTests extends Base.TestUtilities {
 
 	@Test(priority = 1, dataProvider = "csvReader", dataProviderClass = CsvDataProviders.class)
-	public void negativeLogInTest(Map<String, String> testData) throws InterruptedException {
+	public void negativeLogInTest(Map<String, String> testData) throws InterruptedException, IOException {
 		// Data
 		String no = testData.get("no");
 		String username = testData.get("username");

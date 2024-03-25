@@ -5,10 +5,13 @@ import java.util.function.Function;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
@@ -21,10 +24,12 @@ public class SeleniumPractice {
 	public static void main(String[] args) throws InterruptedException {
 
 		setup();
+		handleNotification();
 		// implecitWait();
 		// explicitWait();
 		// FluentWaitPractise();
-		javascriptexecutor();
+		// javascriptexecutor();
+		// downloadfile();
 		TearDown();
 
 		// No Such element exception
@@ -54,10 +59,23 @@ public class SeleniumPractice {
 		System.out.println("Create the browser ");
 		System.setProperty("webdriver.chrome.drive",
 				"C:\\Users\\rabiu\\OneDrive\\Documents\\ChromeDriver\\chromedriver.exe");
-		driver = new ChromeDriver();
+		// driver = new ChromeDriver();
 
 		// driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
 		driver.get("https://omayo.blogspot.com/");
+
+		// https://www.justdial.com/
+		// driver.get("https://omayo.blogspot.com/p/page7.html");
+
+		// driver.manage().window().maximize();
+
+	}
+
+	public static void handleNotification() {
+		ChromeOptions option = new ChromeOptions();
+		option.addArguments("-- disable-notification");
+		WebDriver driver = new ChromeDriver(option);
+		driver.get("https://www.justdial.com/");
 		driver.manage().window().maximize();
 
 	}
@@ -80,7 +98,7 @@ public class SeleniumPractice {
 
 	}
 
-	public static void explicitWait() {
+	public static void explicitWait() throws InterruptedException {
 		/*- Instead of waiting for all the Web Elements in the automation script, Explicit
 		wait will wait only for the specific web element
 		 * WebDriverWait wait = new WebDriverWait(driver, 5);
@@ -90,13 +108,27 @@ public class SeleniumPractice {
 		 */
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		synchronized (driver) {
+
+			driver.wait(5000);
+		}
 
 		driver.findElement(By.className("dropbtn")).click();
 		WebElement facebook = wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Facebook")));
 		facebook.click();
 		String titlename = driver.getTitle();
 		System.out.println("Title name is : " + titlename);
+		// added 5 second wait time here..
+
 		Assert.assertEquals("Facebook – log in or sign up", titlename);
+
+		synchronized (driver) {
+
+			driver.wait(5000);
+		}
+
+		Actions action = new Actions(driver);
+		action.sendKeys(Keys.F5);
 
 	}
 
@@ -122,7 +154,7 @@ public class SeleniumPractice {
 
 	}
 
-	public static void javascriptexecutor() {
+	public static void javascriptexecutor() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		WebElement searchbox = driver
 				.findElement(By.xpath("//*[@id=\"BlogSearch1_form\"]/form/table/tbody/tr/td[1]/input"));
@@ -133,26 +165,32 @@ public class SeleniumPractice {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].value='Testrabiul1'", searchbox);
 
-		// searchbox.clear();
-		// Get attribute example
-		WebElement button2 = driver.findElement(By.id("but2"));
-		String attributevalue = button2.getAttribute("type");
-		System.out.println("Attribute value : " + attributevalue);
+		js.executeScript("window.scrollBy(0,1000)");
+		Thread.sleep(5000);
 
-		WebElement searchbutton = driver
-				.findElement(By.xpath("//*[@id=\"BlogSearch1_form\"]/form/table/tbody/tr/td[2]/input"));
-		searchbutton.click();
-
-		WebElement searchResult = driver.findElement(By.xpath("//*[@id=\"Blog1\"]/div[1]"));
-		String getText = searchResult.getText();
-
-		System.out.println("Search result : " + getText);
+		/*
+		 * / searchbox.clear(); // Get attribute example WebElement button2 =
+		 * driver.findElement(By.id("but2")); String attributevalue =
+		 * button2.getAttribute("type"); System.out.println("Attribute value : " +
+		 * attributevalue);
+		 * 
+		 * WebElement searchbutton = driver .findElement(By.xpath(
+		 * "//*[@id=\"BlogSearch1_form\"]/form/table/tbody/tr/td[2]/input"));
+		 * searchbutton.click();
+		 * 
+		 * WebElement searchResult =
+		 * driver.findElement(By.xpath("//*[@id=\"Blog1\"]/div[1]")); String getText =
+		 * searchResult.getText();
+		 * 
+		 * System.out.println("Search result : " + getText);
+		 */
 
 	}
 
 	public static void TearDown() {
 
 		driver.quit();
+		System.out.println("Closing the driver");
 
 	}
 

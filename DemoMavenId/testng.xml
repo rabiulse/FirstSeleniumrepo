@@ -7,7 +7,7 @@
 		</classes>
   </test> <!-- Test -->
   
-  <test thread-count="1" name="keyPressTest">
+  <test thread-count="2" name="keyPressTest">
 	  <classes>
 			<class name="DemoMaven.DemoMavenId.keyPressTest"/>
 		</classes>

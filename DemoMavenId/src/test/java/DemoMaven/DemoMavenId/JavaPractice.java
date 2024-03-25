@@ -6,6 +6,9 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
+
+import Base.Log;
 
 public class JavaPractice {
 
@@ -16,7 +19,17 @@ public class JavaPractice {
 		// Reverse();
 		// totallowerCaseUpperCase();
 		// arraylistpratice();
-		hashmapexercise();
+		// hashmapexercise();
+		// twogivenstringcomapre();
+
+		// samecharacterinstring();
+		//// concatstring();
+
+		// removeparticularcharFromString();
+
+		SplitString();
+		// insertNewString();
+		// calculateevenNumber();
 	}
 
 	// Reverse the given String ::
@@ -47,7 +60,7 @@ public class JavaPractice {
 		System.out.println("Sum is : " + sum);
 		System.out.println("2nd program for find out the largest number");
 		int largest;
-		largest = a > b ? a : b;
+		largest = a > b ? a : b;// ternary operate
 		System.out.println("lagest number is : " + largest);
 
 	}
@@ -55,14 +68,13 @@ public class JavaPractice {
 	// Program to find out total number of lower case and upper case in a given
 	// String
 	private static void totallowerCaseUpperCase() {
-		System.out
-				.println("Program #3: Program to find out total number of lower case and upper case in a given String");
+		System.out.println("Program to find out total number of lower case and upper case in a given String");
 
-		String S = "    Myname israbiul   ";
+		String S = "    Myname isRAbiul   ";
 		String withoutSpace = S.strip();
 
 		System.out.println("Given String: " + S);
-		System.out.println("After Trimming space: " + withoutSpace);
+		System.out.println("After Trimming space at aleading and traling " + withoutSpace);
 		int upper = 0;
 		int lower = 0;
 
@@ -77,8 +89,8 @@ public class JavaPractice {
 			}
 
 		}
-		System.out.println("lower numner " + lower);
-		System.out.println("upper numner " + upper);
+		System.out.println("lower number count " + lower);
+		System.out.println("lower number count " + upper);
 
 	}
 
@@ -144,6 +156,115 @@ public class JavaPractice {
 
 		for (Map.Entry m : keyvalue.entrySet()) {
 			System.out.println(m.getKey() + " " + m.getValue());
+		}
+
+	}
+
+	// Problem statement : Two given string is same or not
+	private static void twogivenstringcomapre() {
+		String st1 = "My name is rabiul";
+		String st2 = "My name is rabiul";
+		System.out.println("Given name1: " + st1);
+		System.out.println("Given name1:" + st2);
+
+		boolean verifytwostring = false;
+		verifytwostring = st1.equals(st2);
+		System.out.println(st1 + " & " + st2 + " =" + verifytwostring);
+
+	}
+
+// concatenation of  two string
+	private static void concatstring() {
+		String st1 = "Rabiul";
+		String st2 = "HasanUzzaman";
+		System.out.println("Given name1: " + st1);
+		System.out.println("Given name1:" + st2);
+		String ConcatSt = st1.concat(st2);
+
+		System.out.println("Concate String " + ConcatSt);
+
+	}
+
+// Problem statement: Removed particular character from given string; 
+	private static void removeparticularcharFromString() {
+
+		String Str = "RabiulHasan";
+		int pos = 4;
+
+		String newStr = Str.substring(0, pos) + " " + Str.substring(pos + 1);
+		System.out.println(newStr);
+
+	}
+
+//Problem statement: Character count in the given string : 
+	private static void samecharacterinstring() {
+		String st1 = "RabiulHasanUzzaman";
+		String uppercase = st1.toUpperCase();
+
+		System.out.println("Given String: " + st1);
+		System.out.println(" Upper case " + uppercase);
+
+		// find out the letter in the 0th position:
+		int k = uppercase.charAt(0);
+		int l = st1.charAt(4);
+
+		System.out.println("The letter in the fifth position " + (char) l);
+
+		char[] ch = st1.toCharArray();// Convert the string to character array
+		int counter = 0;
+		for (int i = (ch.length - 1); i >= 0; i--) {
+
+			if (ch[i] == 'a') {
+				counter++;
+
+			}
+
+		}
+		System.out.println("Total character  counter is  in given string:  " + st1 + " is: " + counter);
+	}
+
+	// How to split a string into a number of substrings in Java
+	private static void SplitString() {
+		Log.info("Split String test");
+		String str = "jan:feb:march:test";
+		String[] str1 = str.split(":");
+
+		for (String srt2 : str1) {
+			System.out.println(srt2);
+
+		}
+
+	}
+
+	// write a program to insert a new String to the original String.
+	public static void insertNewString()
+
+	{
+		String Original = "Rabiul Uzzaman";
+		String toBeInserted = "Hasan";
+		int index = 6;
+		StringBuffer strbuffer = new StringBuffer(Original);
+		// StringBuffer ReverserStr = strbuffer.reverse();
+		StringBuffer newString = strbuffer.insert(index + 1, toBeInserted);
+		System.out.println("Original String: " + Original);
+		System.out.println("Inserted Sting: " + toBeInserted);
+		System.out.println("New updated String: " + newString);
+
+	}
+
+	// Find out the even number :
+
+	public static void calculateevenNumber() {
+		System.out.println("Enter number:");
+		Scanner sc = new Scanner(System.in);
+		int number = sc.nextInt();
+		System.out.println("Even number: ");
+		for (int i = 0; i < number; i++) {
+			if (i % 2 == 0) {
+				System.out.println(i);
+
+			}
+
 		}
 
 	}

@@ -1,34 +1,22 @@
 package DemoMaven.DemoMavenId;
 
-import org.testng.annotations.Test;
 import java.io.IOException;
-import java.time.Duration;
 
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-import Base.BaseTest;
-import PageObject.IframPageObject;
-import PageObject.alertPageObject;
-import PageObject.fileUploadPageObject;
-import PageObject.keyPressPageObject;
-import PageObject.multipleWindowsPageObject;
-import PageObject.IframPageObject;
 
-public class fileUploadTest extends fileUploadPageObject {
-	
-	
+import Base.BaseTest;
+import Base.TestUtilities;
+import PageObject.fileUploadPageObject;
+
+public class fileUploadTest extends TestUtilities {
+
 	@Test
-    public  void fileUploadTest() {		
+	public void fileUploadTest() throws IOException {
 		System.out.println("Starting Test ");
-		BaseTest base =new BaseTest();	
+		BaseTest base = new BaseTest();
 		fileUploadPageObject fileupload = new fileUploadPageObject();
 		base.lunchUrl();
 		fileupload.openfileUpload();
-		base.TearDown();		
-    }		
+		base.TearDown();
+	}
 }

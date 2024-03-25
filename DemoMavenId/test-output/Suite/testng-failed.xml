@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="IframeTest(failed)">
+    <classes>
+      <class name="DemoMaven.DemoMavenId.IframeTest">
+        <methods>
+          <include name="IframeTest"/>
+        </methods>
+      </class> <!-- DemoMaven.DemoMavenId.IframeTest -->
+    </classes>
+  </test> <!-- IframeTest(failed) -->
+  <test thread-count="5" name="keyPressTest(failed)">
+    <classes>
+      <class name="DemoMaven.DemoMavenId.keyPressTest">
+        <methods>
+          <include name="KeyPressTest"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- DemoMaven.DemoMavenId.keyPressTest -->
+    </classes>
+  </test> <!-- keyPressTest(failed) -->
+  <test thread-count="5" name="fileUploadTest(failed)">
+    <classes>
+      <class name="DemoMaven.DemoMavenId.fileUploadTest">
+        <methods>
+          <include name="fileUploadTest"/>
+        </methods>
+      </class> <!-- DemoMaven.DemoMavenId.fileUploadTest -->
+    </classes>
+  </test> <!-- fileUploadTest(failed) -->
+  <test thread-count="5" name="NegativeLogInTests(failed)">
+    <classes>
+      <class name="DemoMaven.DemoMavenId.NegativeLogInTests">
+        <methods>
+          <include name="negativeLogInTest" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- DemoMaven.DemoMavenId.NegativeLogInTests -->
+    </classes>
+  </test> <!-- NegativeLogInTests(failed) -->
+</suite> <!-- Failed suite [Suite] -->

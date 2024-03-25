@@ -1,7 +1,10 @@
 package Base;
 
-import java.time.Duration;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Iterator;
+import java.util.Properties;
 import java.util.Set;
 
 import org.openqa.selenium.Alert;
@@ -17,48 +20,41 @@ public class BaseTest {
 
 	public static WebDriver driver;
 
-	public void lunchUrl() {
+	public void lunchUrl() throws IOException {
 		// final org.apache.logging.log4j.Logger logger = LogManager.getLogger();
 		System.out.println("Create the browser ");
 		System.setProperty("webdriver.chrome.drive",
 				"C:\\Users\\rabiu\\OneDrive\\Documents\\ChromeDriver\\chromedriver.exe");
 		this.driver = new ChromeDriver();
 		driver.manage().window().maximize();
+		// Properties prop = new Properties();
+		// File file = new File("src\\test\\resources\\data.properties");
+		// FileInputStream fis = new FileInputStream(file);
+		// prop.load(fis);
 
 		driver.get("http://the-internet.herokuapp.com/");
+		// driver.get(prop.getProperty("url"));
+		// String URL = getdataFromPropertyFile("URL");
+		// driver.get(URL);
 
 		String TitleName = driver.getTitle();
 		System.out.println("The title name: " + TitleName);
 		Assert.assertEquals(TitleName, "The Internet");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		// driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
 	}
 
-	/*
-	 * public void lunchUrl2() { //final org.apache.logging.log4j.Logger logger =
-	 * LogManager.getLogger(); System.out.println("Create the browser ");
-	 * System.setProperty("webdriver.chrome.drive",
-	 * "C:\\Users\\rabiu\\OneDrive\\Documents\\ChromeDriver\\chromedriver.exe");
-	 * this.driver=new ChromeDriver(); driver.manage().window().maximize();
-	 * driver.get("http://the-internet.herokuapp.com/"); String
-	 * TitleName=driver.getTitle(); //logger.info("The title name: " + TitleName);
-	 * System.out.println("The title name: " + TitleName);
-	 * Assert.assertEquals(TitleName, "The Internet");
-	 * driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1)); WebElement
-	 * username=driver.findElement(By.xpath("//input[@id='user-name']"));
-	 * username.sendKeys("standard_user"); WebElement
-	 * password=driver.findElement(By.xpath("//input[@id='password']"));
-	 * password.sendKeys("secret_sauce"); WebElement
-	 * Signin=driver.findElement(By.xpath("//input[@id='login-button']"));
-	 * Signin.click();
-	 * 
-	 * String TitleName1=driver.getTitle(); System.out.println("The title name: " +
-	 * TitleName1);
-	 * 
-	 * 
-	 * 
-	 * }
-	 */
+	public String getdataFromPropertyFile(String value) throws IOException {
+		Properties prop = new Properties();
+		File file = new File("src\\test\\resources\\data.properties");
+		FileInputStream fis = new FileInputStream(file);
+		prop.load(fis);
+		// System prop = null;
+		// driver.get("http://the-internet.herokuapp.com/");
+		String url = prop.getProperty(value);
+		return url;
+
+	}
 
 	public void openjserrorURL() {
 		System.out.println("Create the browser ");
