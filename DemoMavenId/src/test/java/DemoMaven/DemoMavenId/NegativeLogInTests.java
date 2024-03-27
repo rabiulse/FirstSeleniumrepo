@@ -13,7 +13,7 @@ public class NegativeLogInTests extends Base.TestUtilities {
 
 	@Test(priority = 1, dataProvider = "csvReader", dataProviderClass = CsvDataProviders.class)
 	public void negativeLogInTest(Map<String, String> testData) throws InterruptedException, IOException {
-		// Data
+		// getting the Data from CSV file
 		String no = testData.get("no");
 		String username = testData.get("username");
 		String password = testData.get("password");
@@ -22,15 +22,9 @@ public class NegativeLogInTests extends Base.TestUtilities {
 
 		LoginPageObject login = new LoginPageObject();
 		System.out.println("Starting negativeLogInTest #" + no + " for " + description);
-		// Logs.info("Starting negativeLogInTest #" + no + " for " + description);
 
 		login.lunchUrl();
-		// open main page
-		// WelcomePage welcomePage = new WelcomePage(driver, log);
-		// welcomePage.openPage();
 
-		// Click on Form Authentication link
-		// LoginPage loginPage = welcomePage.clickFormAuthenticationLink();
 		login.clickOnAuthenticationLink();
 
 		// execute negative login

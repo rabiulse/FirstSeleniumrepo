@@ -13,8 +13,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 
-//@Listeners({Base.TestListner.class})
+@Listeners({ Base.TestListner.class })
 
 public class BaseTest {
 
@@ -51,7 +52,9 @@ public class BaseTest {
 		prop.load(fis);
 		// System prop = null;
 		// driver.get("http://the-internet.herokuapp.com/");
-		String url = prop.getProperty(value);
+		prop.getProperty("url");
+		System.out.println("get url:" + prop.getProperty("url"));
+		String url = prop.getProperty("url");
 		return url;
 
 	}
