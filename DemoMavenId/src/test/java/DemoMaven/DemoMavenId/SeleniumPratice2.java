@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class SeleniumPratice2 {
 
-	@Test(priority = 4)
+	@Test(priority = 1)
 	public void TestnAssetTest() {
 		int a = 9;
 		int b = 8;
@@ -20,7 +20,7 @@ public class SeleniumPratice2 {
 		System.out.println("Application URL open");
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 4)
 	public void LoginTest() {
 
 		System.out.println("LoginTest");

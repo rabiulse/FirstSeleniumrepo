@@ -1,5 +1,8 @@
 package DemoMaven.DemoMavenId;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.time.Duration;
 import java.util.function.Function;
 
@@ -24,8 +27,9 @@ public class SeleniumPractice {
 	public static void main(String[] args) throws InterruptedException {
 
 		setup();
-		handleNotification();
+		// handleNotification();
 		// implecitWait();
+		checkboxexample();
 		// explicitWait();
 		// FluentWaitPractise();
 		// javascriptexecutor();
@@ -59,7 +63,8 @@ public class SeleniumPractice {
 		System.out.println("Create the browser ");
 		System.setProperty("webdriver.chrome.drive",
 				"C:\\Users\\rabiu\\OneDrive\\Documents\\ChromeDriver\\chromedriver.exe");
-		// driver = new ChromeDriver();
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
 
 		// driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
 		driver.get("https://omayo.blogspot.com/");
@@ -67,7 +72,22 @@ public class SeleniumPractice {
 		// https://www.justdial.com/
 		// driver.get("https://omayo.blogspot.com/p/page7.html");
 
-		// driver.manage().window().maximize();
+	}
+
+	public static void checkboxexample() {
+		System.out.println("check box example- ");
+		WebElement checkboxexample = driver.findElement(By.xpath("//*[@id=\"HTML33\"]/div[1]/input[2]"));
+
+		boolean resut = checkboxexample.isSelected();
+		if (resut == true) {
+			System.out.println("It is selected");
+
+		}
+
+		else {
+
+			System.out.println("It is NOT selected");
+		}
 
 	}
 
@@ -108,6 +128,7 @@ public class SeleniumPractice {
 		 */
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
 		synchronized (driver) {
 
 			driver.wait(5000);
@@ -115,6 +136,7 @@ public class SeleniumPractice {
 
 		driver.findElement(By.className("dropbtn")).click();
 		WebElement facebook = wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Facebook")));
+		WebElement facebook1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Test")));
 		facebook.click();
 		String titlename = driver.getTitle();
 		System.out.println("Title name is : " + titlename);
@@ -138,7 +160,7 @@ public class SeleniumPractice {
 		driver.findElement(By.className("dropbtn")).click();
 
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(30))
-				.pollingEvery(Duration.ofSeconds(1)).ignoring(NoSuchElementException.class);
+				.pollingEvery(Duration.ofSeconds(5)).ignoring(NoSuchElementException.class);
 
 		WebElement facebookbutton = wait.until(new Function<WebDriver, WebElement>() {
 			@Override
@@ -184,6 +206,14 @@ public class SeleniumPractice {
 		 * 
 		 * System.out.println("Search result : " + getText);
 		 */
+
+	}
+
+	public static void databaseConnection() throws SQLException {
+		String Username = "root";
+		String password = "root";
+		String URLW = "jdbc://mysql://localhost:3306/databasename";
+		Connection conn = DriverManager.getConnection(URLW, Username, password);
 
 	}
 

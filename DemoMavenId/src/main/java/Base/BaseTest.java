@@ -41,6 +41,7 @@ public class BaseTest {
 		String TitleName = driver.getTitle();
 		System.out.println("The title name: " + TitleName);
 		Assert.assertEquals(TitleName, "The Internet");
+
 		// driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
 	}

@@ -5,9 +5,9 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import Base.BaseTest;
-import Base.Log;
 
 public class IframPageObject extends BaseTest {
 	BaseTest base = new BaseTest();
@@ -31,7 +31,9 @@ public class IframPageObject extends BaseTest {
 			System.out.println(" current  Page URL  :" + getcurrentURL);
 
 			String Title = driver.getTitle();
-
+			// int iframecount = Integer.parseInt(js.executeScript("return
+			// window.lenght").toString());
+			// System.out.println("iFraneCount name is : " + iframecount);
 			System.out.println("Title of the current Page- :" + Title);
 
 			// Assert.assertEquals(getcurrentURL,
@@ -53,9 +55,8 @@ public class IframPageObject extends BaseTest {
 	private void verifyText() {
 		WebElement TextAreaonIfame = driver.findElement(By.xpath("//*[@id=\"tinymce\"]/p"));
 		String Textvalue = TextAreaonIfame.getText();
-		Log.info("value on Test in Iframe" + Textvalue);
-		Log.fatal("fatal error message" + Textvalue);
 		System.out.println("Value on Text On Iframe: " + Textvalue);
+		Assert.assertEquals("Your content goes here.", Textvalue);
 
 	}
 }
