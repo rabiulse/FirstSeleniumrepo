@@ -25,4 +25,17 @@
 		</classes>
   </test> <!-- Test -->
   
+    <test thread-count="1" name="checkboxTest">
+	  <classes>
+			<class name="DemoMaven.DemoMavenId.checkboxTest"/>
+		</classes>
+  </test> <!-- Test -->
+  
+   <test thread-count="1" name="dropdownTest">
+	  <classes>
+			<class name="DemoMaven.DemoMavenId.dropdownTest"/>
+		</classes>
+  </test> <!-- Test -->
+  
+  
 </suite> <!-- Suite -->

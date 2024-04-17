@@ -7,18 +7,20 @@ import org.testng.annotations.Test;
 import Base.BaseTest;
 import Base.Log;
 import Base.TestUtilities;
-import PageObject.newwelcomePageObject;
+import PageObject.checkboxpageobject;
 
 public class checkboxTest extends TestUtilities {
 
 	@Test
-	public void IframeTest() throws IOException {
+	public void checkboxTest() throws IOException, InterruptedException {
 
 		Log.info("CheckboxTest");
 		BaseTest base = new BaseTest();
-		newwelcomePageObject welcome = new newwelcomePageObject();
+		checkboxpageobject checkboxexample = new checkboxpageobject();
 		base.lunchUrl();
-		welcome.clickOncheckBox();
+		checkboxexample.clickOncheckBox();
+		checkboxexample.verifyCheckboxstatus();
+		checkboxexample.perfromclickonCheckbox();
 		sleep(12);
 		base.TearDown();
 	}

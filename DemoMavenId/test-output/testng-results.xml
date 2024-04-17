@@ -1,17 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-17T11:13:59 IST" name="Default suite" finished-at="2024-04-17T11:14:06 IST" duration-ms="7657">
+  <suite started-at="2024-04-17T15:41:57 IST" name="Suite" finished-at="2024-04-17T15:43:37 IST" duration-ms="100299">
     <groups>
     </groups>
-    <test started-at="2024-04-17T11:13:59 IST" name="Default test" finished-at="2024-04-17T11:14:06 IST" duration-ms="7657">
-      <class name="DemoMaven.DemoMavenId.checkboxTest">
-        <test-method signature="IframeTest()[pri:0, instance:DemoMaven.DemoMavenId.checkboxTest@2767e23c]" started-at="2024-04-17T11:13:59 IST" name="IframeTest" finished-at="2024-04-17T11:14:06 IST" duration-ms="7253" status="PASS">
+    <test started-at="2024-04-17T15:41:57 IST" name="IframeTest" finished-at="2024-04-17T15:42:12 IST" duration-ms="15456">
+      <class name="DemoMaven.DemoMavenId.IframeTest">
+        <test-method signature="IframeTest()[pri:0, instance:DemoMaven.DemoMavenId.IframeTest@2767e23c]" started-at="2024-04-17T15:41:57 IST" name="IframeTest" finished-at="2024-04-17T15:42:12 IST" duration-ms="14935" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IframeTest -->
+      </class> <!-- DemoMaven.DemoMavenId.IframeTest -->
+    </test> <!-- IframeTest -->
+    <test started-at="2024-04-17T15:42:12 IST" name="keyPressTest" finished-at="2024-04-17T15:42:26 IST" duration-ms="13289">
+      <class name="DemoMaven.DemoMavenId.keyPressTest">
+        <test-method signature="KeyPressTest()[pri:0, instance:DemoMaven.DemoMavenId.keyPressTest@4bff7da0]" started-at="2024-04-17T15:42:12 IST" name="KeyPressTest" finished-at="2024-04-17T15:42:26 IST" duration-ms="13289" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- KeyPressTest -->
+      </class> <!-- DemoMaven.DemoMavenId.keyPressTest -->
+    </test> <!-- keyPressTest -->
+    <test started-at="2024-04-17T15:42:26 IST" name="fileUploadTest" finished-at="2024-04-17T15:42:43 IST" duration-ms="16937">
+      <class name="DemoMaven.DemoMavenId.fileUploadTest">
+        <test-method signature="fileUploadTest()[pri:0, instance:DemoMaven.DemoMavenId.fileUploadTest@776a6d9b]" started-at="2024-04-17T15:42:26 IST" name="fileUploadTest" finished-at="2024-04-17T15:42:43 IST" duration-ms="16922" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fileUploadTest -->
+      </class> <!-- DemoMaven.DemoMavenId.fileUploadTest -->
+    </test> <!-- fileUploadTest -->
+    <test started-at="2024-04-17T15:42:43 IST" name="NegativeLogInTests" finished-at="2024-04-17T15:43:10 IST" duration-ms="27316">
+      <class name="DemoMaven.DemoMavenId.NegativeLogInTests">
+        <test-method signature="negativeLogInTest(java.util.Map)[pri:1, instance:DemoMaven.DemoMavenId.NegativeLogInTests@33f676f6]" started-at="2024-04-17T15:42:43 IST" name="negativeLogInTest" data-provider="csvReader" finished-at="2024-04-17T15:42:58 IST" duration-ms="15340" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{no=1, description=incorrect username, password=SuperSecretPassword!, expectedMessage=Your username is invalid!, username=incorrectUsername}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeLogInTest -->
+        <test-method signature="negativeLogInTest(java.util.Map)[pri:1, instance:DemoMaven.DemoMavenId.NegativeLogInTests@33f676f6]" started-at="2024-04-17T15:42:58 IST" name="negativeLogInTest" data-provider="csvReader" finished-at="2024-04-17T15:43:10 IST" duration-ms="11911" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{no=2, description=incorrect password, password=incorrectPassword, expectedMessage=Your password is invalid!, username=tomsmith}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeLogInTest -->
+      </class> <!-- DemoMaven.DemoMavenId.NegativeLogInTests -->
+    </test> <!-- NegativeLogInTests -->
+    <test started-at="2024-04-17T15:43:10 IST" name="checkboxTest" finished-at="2024-04-17T15:43:24 IST" duration-ms="14314">
+      <class name="DemoMaven.DemoMavenId.checkboxTest">
+        <test-method signature="checkboxTest()[pri:0, instance:DemoMaven.DemoMavenId.checkboxTest@b86de0d]" started-at="2024-04-17T15:43:10 IST" name="checkboxTest" finished-at="2024-04-17T15:43:24 IST" duration-ms="14299" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkboxTest -->
       </class> <!-- DemoMaven.DemoMavenId.checkboxTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- checkboxTest -->
+    <test started-at="2024-04-17T15:43:24 IST" name="dropdownTest" finished-at="2024-04-17T15:43:37 IST" duration-ms="12897">
+      <class name="DemoMaven.DemoMavenId.keyPressTest">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:DemoMaven.DemoMavenId.keyPressTest@4bff7da0]" started-at="2024-04-17T15:43:37 IST" name="afterSuite" finished-at="2024-04-17T15:43:37 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- DemoMaven.DemoMavenId.keyPressTest -->
+      <class name="DemoMaven.DemoMavenId.dropdownTest">
+        <test-method signature="dropdownTest()[pri:0, instance:DemoMaven.DemoMavenId.dropdownTest@70e38ce1]" started-at="2024-04-17T15:43:24 IST" name="dropdownTest" finished-at="2024-04-17T15:43:37 IST" duration-ms="12896" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dropdownTest -->
+      </class> <!-- DemoMaven.DemoMavenId.dropdownTest -->
+    </test> <!-- dropdownTest -->
+  </suite> <!-- Suite -->
 </testng-results>

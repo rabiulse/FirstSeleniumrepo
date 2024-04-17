@@ -3,6 +3,7 @@ package Base;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Iterator;
 import java.util.Properties;
 import java.util.Set;
@@ -27,6 +28,7 @@ public class BaseTest {
 		System.setProperty("webdriver.chrome.drive",
 				"C:\\Users\\rabiu\\OneDrive\\Documents\\ChromeDriver\\chromedriver.exe");
 		this.driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
 		// Properties prop = new Properties();
 		// File file = new File("src\\test\\resources\\data.properties");
