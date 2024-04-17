@@ -34,7 +34,7 @@ public class restAssuredTest {
 	@Test
 	public void createUser() {
 		HashMap<String, String> testdata = new HashMap<String, String>();
-		testdata.put("name", "raboul");
+		testdata.put("name", "rabiul");
 		testdata.put("job", "IT");
 
 		given().contentType("application/json").body(testdata)

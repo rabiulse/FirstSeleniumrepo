@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-12T20:57:53 IST" name="Default suite" finished-at="2024-04-12T20:57:53 IST" duration-ms="59">
+  <suite started-at="2024-04-17T11:13:59 IST" name="Default suite" finished-at="2024-04-17T11:14:06 IST" duration-ms="7657">
     <groups>
     </groups>
-    <test started-at="2024-04-12T20:57:53 IST" name="Default test" finished-at="2024-04-12T20:57:53 IST" duration-ms="59">
-      <class name="DemoMaven.DemoMavenId.switchCaseExmple">
-        <test-method signature="switchcase()[pri:0, instance:DemoMaven.DemoMavenId.switchCaseExmple@548d708a]" started-at="2024-04-12T20:57:53 IST" name="switchcase" finished-at="2024-04-12T20:57:53 IST" duration-ms="20" status="PASS">
+    <test started-at="2024-04-17T11:13:59 IST" name="Default test" finished-at="2024-04-17T11:14:06 IST" duration-ms="7657">
+      <class name="DemoMaven.DemoMavenId.checkboxTest">
+        <test-method signature="IframeTest()[pri:0, instance:DemoMaven.DemoMavenId.checkboxTest@2767e23c]" started-at="2024-04-17T11:13:59 IST" name="IframeTest" finished-at="2024-04-17T11:14:06 IST" duration-ms="7253" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- switchcase -->
-      </class> <!-- DemoMaven.DemoMavenId.switchCaseExmple -->
+        </test-method> <!-- IframeTest -->
+      </class> <!-- DemoMaven.DemoMavenId.checkboxTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -7,9 +7,9 @@ import org.testng.annotations.Test;
 import Base.BaseTest;
 import PageObject.multipleWindowsPageObject;
 
+@Test
 public class multipleWindows extends multipleWindowsPageObject {
 
-	@Test
 	public void MultipleWindows() throws IOException {
 
 		System.out.println("Starting Test ");
