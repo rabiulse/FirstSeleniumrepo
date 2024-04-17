@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 import Base.Log;
 
-public class JavaPractice {
+public class stringPractice {
 
 	public static void main(String[] args) {
 		// Program #1 to find out the largest number
