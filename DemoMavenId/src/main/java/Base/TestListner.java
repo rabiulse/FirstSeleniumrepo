@@ -20,6 +20,7 @@ public class TestListner implements ITestListener {
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		log.info("[Test " + testMethodName + " passed]");
+
 	}
 
 	@Override

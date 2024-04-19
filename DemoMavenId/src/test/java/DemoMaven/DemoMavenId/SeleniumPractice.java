@@ -143,6 +143,7 @@ public class SeleniumPractice {
 		// added 5 second wait time here..
 
 		Assert.assertEquals("Facebook – log in or sign up", titlename);
+		// Assert.assertTrue(facebook1.isSelected());
 
 		synchronized (driver) {
 
