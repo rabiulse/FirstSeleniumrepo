@@ -67,7 +67,8 @@ public class SeleniumPractice {
 		driver.manage().window().maximize();
 
 		// driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
-		driver.get("https://omayo.blogspot.com/");
+		// driver.get("https://omayo.blogspot.com/");
+		driver.navigate().to("https://omayo.blogspot.com/");
 
 		// https://www.justdial.com/
 		// driver.get("https://omayo.blogspot.com/p/page7.html");
@@ -79,6 +80,9 @@ public class SeleniumPractice {
 		WebElement checkboxexample = driver.findElement(By.xpath("//*[@id=\"HTML33\"]/div[1]/input[2]"));
 
 		boolean resut = checkboxexample.isSelected();
+
+		Assert.assertTrue(resut);
+		// Assert.assertFalse(resut);
 		if (resut == true) {
 			System.out.println("It is selected");
 
