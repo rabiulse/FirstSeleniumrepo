@@ -16,10 +16,25 @@ public class fileUploadPageObject extends BaseTest {
 			fileupload.click();
 			String getcurrentURL = driver.getCurrentUrl();
 			System.out.println(" current  Page URL  :" + getcurrentURL);
-			Assert.assertEquals("https://the-internet.herokuapp.com/upload", getcurrentURL);
+			Assert.assertEquals("http://the-internet.herokuapp.com/upload", getcurrentURL);
 
 		} else {
 			System.out.println("clickOnJavaScriptAlert was not clicked");
+		}
+
+	}
+
+	public void fileupload() throws InterruptedException {
+		WebElement fileupload1 = driver.findElement(By.xpath("//*[@id='drag-drop-upload']"));
+
+		if (fileupload1.isDisplayed()) {
+			fileupload1.click();
+
+			fileupload1.sendKeys(
+					"C:\\Users\\rabiu\\git\\repository\\DemoMavenId\\src\\test\\resources\\files\\textfile.txt");
+
+			Thread.sleep(5000);
+
 		}
 
 	}

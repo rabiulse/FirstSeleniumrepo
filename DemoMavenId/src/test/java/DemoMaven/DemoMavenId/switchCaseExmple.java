@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 public class switchCaseExmple {
 	@Test
 	public static void switchcase() {
-		int day = 10; // Replace with your desired size (1, 2, 3, 4, or 5)
+		int day = 18; // Replace with your desired size (1, 2, 3, 4, or 5)
 
 		switch (day) {
 		case 1:

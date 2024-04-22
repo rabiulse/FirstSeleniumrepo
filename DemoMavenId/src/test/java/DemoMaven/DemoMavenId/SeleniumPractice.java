@@ -2,7 +2,9 @@ package DemoMaven.DemoMavenId;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.time.Duration;
 import java.util.function.Function;
 
@@ -97,7 +99,7 @@ public class SeleniumPractice {
 
 	public static void handleNotification() {
 		ChromeOptions option = new ChromeOptions();
-		option.addArguments("-- disable-notification");
+		option.addArguments("--disable-notification");
 		WebDriver driver = new ChromeDriver(option);
 		driver.get("https://www.justdial.com/");
 		driver.manage().window().maximize();
@@ -214,11 +216,22 @@ public class SeleniumPractice {
 
 	}
 
-	public static void databaseConnection() throws SQLException {
-		String Username = "root";
-		String password = "root";
-		String URLW = "jdbc://mysql://localhost:3306/databasename";
-		Connection conn = DriverManager.getConnection(URLW, Username, password);
+	void databaseconnection() throws SQLException {
+
+		Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo", "root", "root");
+		Statement statement = connection.createStatement();
+		ResultSet resultSet = statement.executeQuery("Select * from employees where id=3;");
+
+		while (resultSet.next()) {
+
+			int value = resultSet.getInt("phonenumber");
+
+			System.out.println(resultSet.getInt("id"));
+			System.out.println(resultSet.getString("name"));
+			System.out.println(resultSet.getString("place"));
+			System.out.println(resultSet.getInt("experience"));
+
+		}
 
 	}
 

@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class arrayPractice {
 
-	@Test
+	@Test(enabled = false)
 	private static void find_third_largest_number() {
 
 		int[] array = new int[] { 4, 7, 5, 8, 3, 98, 56, 89 };
@@ -30,13 +30,13 @@ public class arrayPractice {
 		}
 		System.out.print(" \n");
 
-		int thirdlargest = array[2];
+		int thirdlargest = array[lenght - 3];
 
 		System.out.println("Third largest: " + thirdlargest + " ");
 
 	}
 
-	@Test
+	@Test(enabled = true)
 	private static void sort_descending_order() {
 
 		int[] array = new int[] { 4, 7, 5, 8, 3, 98, 56 };

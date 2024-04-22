@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 @Test
 public class DataProviderDemo {
+
 	@Test(dataProvider = "Test")
 
 	public void loginTest(String username, String password) {
@@ -16,7 +17,7 @@ public class DataProviderDemo {
 	@DataProvider(name = "Test")
 	public Object[][] datasupplier() {
 
-		Object[][] testdata = { { "rabi1", "1234" }, { "rabi2", "456" }, { "Rabi2", "345" } };
+		Object[][] testdata = { { "rabi1", "1234" }, { "rabi2", "456" }, { "Rabi2", "345" }, { "sdfg", "sfg" } };
 		return testdata;
 	}
 

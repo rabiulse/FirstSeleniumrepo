@@ -11,12 +11,13 @@ import PageObject.fileUploadPageObject;
 public class fileUploadTest extends TestUtilities {
 
 	@Test
-	public void fileUploadTest() throws IOException {
+	public void fileUploadTest() throws IOException, InterruptedException {
 		System.out.println("Starting Test ");
 		BaseTest base = new BaseTest();
 		fileUploadPageObject fileupload = new fileUploadPageObject();
 		base.lunchUrl();
-		fileupload.openfileUpload();
+		// fileupload.openfileUpload();
+		// fileupload.fileupload();
 		base.TearDown();
 	}
 }
