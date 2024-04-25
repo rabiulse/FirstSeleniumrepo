@@ -743,7 +743,7 @@ public class stringPractice {
 		int k = uppercase.charAt(0);
 		int l = st1.charAt(4);
 
-		System.out.println("The letter in the fifth position " + (char) l);
+		System.out.println("The letter in the fifth position " + l);
 
 		char[] ch = st1.toCharArray();// Convert the string to character array
 		int counter = 0;

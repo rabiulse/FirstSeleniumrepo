@@ -28,7 +28,7 @@ public class CsvDataProviders {
 		try {
 			CSVReader reader = new CSVReader(new FileReader(file));
 			String[] keys = reader.readNext();
-			if (keys != null) {
+			if (keys != null) {// checking the rows
 				String[] dataParts;
 				while ((dataParts = reader.readNext()) != null) {
 					Map<String, String> testData = new HashMap<String, String>();

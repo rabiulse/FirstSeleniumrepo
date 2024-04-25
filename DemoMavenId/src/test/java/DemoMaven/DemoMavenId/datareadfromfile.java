@@ -15,8 +15,8 @@ public class datareadfromfile {
 	@Test(enabled = false)
 	void dataReadfromfileusingScanner() throws IOException {
 
-		FileInputStream is = new FileInputStream(path);
-		try (Scanner sc = new Scanner(is, StandardCharsets.UTF_8.name())) {
+		FileInputStream fis = new FileInputStream(path);
+		try (Scanner sc = new Scanner(fis, StandardCharsets.UTF_8.name())) {
 			while (sc.hasNextLine()) {
 
 				System.out.println(sc.nextLine());

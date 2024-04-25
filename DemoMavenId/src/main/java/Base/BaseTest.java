@@ -53,8 +53,6 @@ public class BaseTest {
 		File file = new File("src\\test\\resources\\data.properties");
 		FileInputStream fis = new FileInputStream(file);
 		prop.load(fis);
-		// System prop = null;
-		// driver.get("http://the-internet.herokuapp.com/");
 		prop.getProperty("url");
 		System.out.println("get url:" + prop.getProperty("url"));
 		String url = prop.getProperty("url");
