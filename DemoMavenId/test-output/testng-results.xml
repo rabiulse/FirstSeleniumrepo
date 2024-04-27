@@ -1,113 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
   <reporter-output>
-    <line>
-      <![CDATA[Browser Opened]]>
-    </line>
-    <line>
-      <![CDATA[Browser Maximized]]>
-    </line>
-    <line>
-      <![CDATA[Tilte nameThe Internet]]>
-    </line>
-    <line>
-      <![CDATA[Browser Closed:]]>
-    </line>
   </reporter-output>
-  <suite started-at="2024-04-22T20:24:40 IST" name="Suite" finished-at="2024-04-22T20:26:26 IST" duration-ms="105858">
+  <suite started-at="2024-04-26T13:06:38 IST" name="Default suite" finished-at="2024-04-26T13:06:38 IST" duration-ms="25">
     <groups>
     </groups>
-    <test started-at="2024-04-22T20:24:40 IST" name="IframeTest" finished-at="2024-04-22T20:24:53 IST" duration-ms="13289">
-      <class name="DemoMaven.DemoMavenId.IframeTest">
-        <test-method signature="IframeTest()[pri:0, instance:DemoMaven.DemoMavenId.IframeTest@1750fbeb]" started-at="2024-04-22T20:24:40 IST" name="IframeTest" finished-at="2024-04-22T20:24:53 IST" duration-ms="12760" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- IframeTest -->
-      </class> <!-- DemoMaven.DemoMavenId.IframeTest -->
-    </test> <!-- IframeTest -->
-    <test started-at="2024-04-22T20:24:53 IST" name="keyPressTest" finished-at="2024-04-22T20:25:12 IST" duration-ms="18589">
-      <class name="DemoMaven.DemoMavenId.keyPressTest">
-        <test-method signature="KeyPressTest()[pri:0, instance:DemoMaven.DemoMavenId.keyPressTest@3cce57c7]" started-at="2024-04-22T20:24:53 IST" name="KeyPressTest" finished-at="2024-04-22T20:25:12 IST" duration-ms="18577" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- KeyPressTest -->
-      </class> <!-- DemoMaven.DemoMavenId.keyPressTest -->
-    </test> <!-- keyPressTest -->
-    <test started-at="2024-04-22T20:25:12 IST" name="fileUploadTest" finished-at="2024-04-22T20:25:19 IST" duration-ms="7319">
-      <class name="DemoMaven.DemoMavenId.fileUploadTest">
-        <test-method signature="fileUploadTest()[pri:0, instance:DemoMaven.DemoMavenId.fileUploadTest@264f218]" started-at="2024-04-22T20:25:12 IST" name="fileUploadTest" finished-at="2024-04-22T20:25:19 IST" duration-ms="7314" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fileUploadTest -->
-      </class> <!-- DemoMaven.DemoMavenId.fileUploadTest -->
-    </test> <!-- fileUploadTest -->
-    <test started-at="2024-04-22T20:25:19 IST" name="NegativeLogInTests" finished-at="2024-04-22T20:25:43 IST" duration-ms="23211">
-      <class name="DemoMaven.DemoMavenId.NegativeLogInTests">
-        <test-method signature="negativeLogInTest(java.util.Map)[pri:1, instance:DemoMaven.DemoMavenId.NegativeLogInTests@747f281]" started-at="2024-04-22T20:25:19 IST" name="negativeLogInTest" data-provider="csvReader" finished-at="2024-04-22T20:25:27 IST" duration-ms="8114" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{no=1, description=incorrect username, password=SuperSecretPassword!, expectedMessage=Your username is invalid!, username=incorrectUsername}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- negativeLogInTest -->
-        <test-method signature="negativeLogInTest(java.util.Map)[pri:1, instance:DemoMaven.DemoMavenId.NegativeLogInTests@747f281]" started-at="2024-04-22T20:25:27 IST" name="negativeLogInTest" data-provider="csvReader" finished-at="2024-04-22T20:25:43 IST" duration-ms="15048" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{no=2, description=incorrect password, password=incorrectPassword, expectedMessage=Your password is invalid!, username=tomsmith}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- negativeLogInTest -->
-      </class> <!-- DemoMaven.DemoMavenId.NegativeLogInTests -->
-    </test> <!-- NegativeLogInTests -->
-    <test started-at="2024-04-22T20:25:43 IST" name="checkboxTest" finished-at="2024-04-22T20:25:55 IST" duration-ms="12320">
-      <class name="DemoMaven.DemoMavenId.checkboxTest">
-        <test-method signature="checkboxTest()[pri:0, instance:DemoMaven.DemoMavenId.checkboxTest@13df2a8c]" started-at="2024-04-22T20:25:43 IST" name="checkboxTest" finished-at="2024-04-22T20:25:55 IST" duration-ms="12304" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkboxTest -->
-      </class> <!-- DemoMaven.DemoMavenId.checkboxTest -->
-    </test> <!-- checkboxTest -->
-    <test started-at="2024-04-22T20:25:55 IST" name="dropdownTest" finished-at="2024-04-22T20:26:09 IST" duration-ms="13852">
-      <class name="DemoMaven.DemoMavenId.dropdownTest">
-        <test-method signature="dropdownTest()[pri:0, instance:DemoMaven.DemoMavenId.dropdownTest@51bf5add]" started-at="2024-04-22T20:25:55 IST" name="dropdownTest" finished-at="2024-04-22T20:26:09 IST" duration-ms="13852" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dropdownTest -->
-      </class> <!-- DemoMaven.DemoMavenId.dropdownTest -->
-    </test> <!-- dropdownTest -->
-    <test started-at="2024-04-22T20:26:09 IST" name="advanceSeleniumfeatures" finished-at="2024-04-22T20:26:26 IST" duration-ms="17060">
-      <class name="DemoMaven.DemoMavenId.keyPressTest">
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:DemoMaven.DemoMavenId.keyPressTest@3cce57c7]" started-at="2024-04-22T20:26:26 IST" name="afterSuite" finished-at="2024-04-22T20:26:26 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- DemoMaven.DemoMavenId.keyPressTest -->
-      <class name="DemoMaven.DemoMavenId.advanceSeleniumfeatures">
-        <test-method signature="popupAuthentication()[pri:0, instance:DemoMaven.DemoMavenId.advanceSeleniumfeatures@1b410b60]" started-at="2024-04-22T20:26:09 IST" name="popupAuthentication" finished-at="2024-04-22T20:26:26 IST" duration-ms="17056" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Browser Opened]]>
-            </line>
-            <line>
-              <![CDATA[Browser Maximized]]>
-            </line>
-            <line>
-              <![CDATA[Tilte nameThe Internet]]>
-            </line>
-            <line>
-              <![CDATA[Browser Closed:]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- popupAuthentication -->
-      </class> <!-- DemoMaven.DemoMavenId.advanceSeleniumfeatures -->
-    </test> <!-- advanceSeleniumfeatures -->
-  </suite> <!-- Suite -->
+    <test started-at="2024-04-26T13:06:38 IST" name="Default test" finished-at="2024-04-26T13:06:38 IST" duration-ms="25">
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
