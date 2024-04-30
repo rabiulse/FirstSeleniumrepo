@@ -1,11 +1,16 @@
 package DemoMaven.DemoMavenId;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.Duration;
+import java.util.Properties;
 import java.util.function.Function;
 
 import org.openqa.selenium.By;
@@ -22,21 +27,26 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class SeleniumPractice {
 	public static WebDriver driver;
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException, IOException {
 
-		setup();
+		// setup();
+		// TearDown();
+
 		// handleNotification();
 		// implecitWait();
-		checkboxexample();
+		// checkboxexample();
+
+		// readdatafromPropertiesfile();
+		fileUploadTest();
 		// explicitWait();
 		// FluentWaitPractise();
 		// javascriptexecutor();
 		// downloadfile();
-		TearDown();
 
 		// No Such element exception
 		// System.out.println(driver.findElement(By.xpath("//input[@value='LoginX']")).isDisplayed());
@@ -61,6 +71,43 @@ public class SeleniumPractice {
 		// driver.findElement(By.xpath("//input[@value='Login']"));
 	}
 
+	@Test
+	public static void fileUploadTest() throws InterruptedException {
+
+		System.out.println("file upload Test the browser ");
+		System.setProperty("webdriver.chrome.drive",
+				"C:\\Users\\rabiu\\OneDrive\\Documents\\ChromeDriver\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.navigate().to("https://demo.guru99.com/test/upload/");
+		WebElement uploadbutton = driver.findElement(By.xpath("//*[@id='uploadfile_0']"));
+		// uploadbutton.click();// click the upload button
+
+		// enter the file path onto the file-selection input field
+		uploadbutton.sendKeys("C:\\Users\\rabiu\\Downloads\\Fee Receipt.pdf");
+
+		// check the "I accept the terms of service" check box
+		driver.findElement(By.id("terms")).click();
+
+		// click the "UploadFile" button
+		driver.findElement(By.name("send")).click();
+
+		// validation pf Test:
+		Thread.sleep(5000);
+		String getTextString = driver.findElement(By.xpath("//h3[@id='res']")).getText().replaceAll("\\s", "");
+
+		System.out.println("get Test value: " + getTextString);
+		Assert.assertEquals(getTextString, "1filehasbeensuccessfullyuploaded.");
+		// String Actualtext = "1 file ";
+		// boolean result = getTextString.equalsIgnoreCase(Actualtext);
+
+		// Assert.assertTrue(result);
+
+		driver.quit();
+
+	}
+
 	public static void setup() {
 		System.out.println("Create the browser ");
 		System.setProperty("webdriver.chrome.drive",
@@ -74,6 +121,30 @@ public class SeleniumPractice {
 
 		// https://www.justdial.com/
 		// driver.get("https://omayo.blogspot.com/p/page7.html");
+
+	}
+
+	public static void readdatafromPropertiesfile() throws IOException
+
+	{
+		Properties prop = new Properties();
+		File file = new File("src\\test\\resources\\data.properties");
+		FileInputStream fis = new FileInputStream(file);
+		prop.load(fis);
+		String url = prop.getProperty("url");
+		System.out.println("get url:" + prop.getProperty("url"));
+		String Password = prop.getProperty("Password");
+		System.out.println("get Password:" + prop.getProperty("Password"));
+
+		// Adding new test data in the property file:
+
+		FileOutputStream fos = new FileOutputStream(file);
+
+		prop.setProperty("TestData", "345678");
+		prop.store(fos, "This is the example of added data");
+
+		String TestData = prop.getProperty("TestData");
+		System.out.println(TestData);
 
 	}
 

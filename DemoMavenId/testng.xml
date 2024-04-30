@@ -37,6 +37,12 @@
 		</classes>
   </test> <!-- Test -->
   
+  <test thread-count="1" name="JavaScriptAlert">
+	  <classes>
+			<class name="DemoMaven.DemoMavenId.JavaScriptAlert"/>
+		</classes>
+  </test> <!-- Test -->
+  
    <test thread-count="1" name="advanceSeleniumfeatures">
 	  <classes>
 			<class name="DemoMaven.DemoMavenId.advanceSeleniumfeatures"/>

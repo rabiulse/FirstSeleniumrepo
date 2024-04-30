@@ -5,10 +5,9 @@ import java.io.IOException;
 import org.testng.annotations.Test;
 
 import Base.BaseTest;
-import Base.TestUtilities;
 import PageObject.fileUploadPageObject;
 
-public class fileUploadTest extends TestUtilities {
+public class fileUploadTest extends fileUploadPageObject {
 
 	@Test
 	public void fileUploadTest() throws IOException, InterruptedException {
@@ -16,8 +15,8 @@ public class fileUploadTest extends TestUtilities {
 		BaseTest base = new BaseTest();
 		fileUploadPageObject fileupload = new fileUploadPageObject();
 		base.lunchUrl();
-		// fileupload.openfileUpload();
-		// fileupload.fileupload();
+		fileupload.openfileUpload();
+		fileupload.fileupload();
 		base.TearDown();
 	}
 }

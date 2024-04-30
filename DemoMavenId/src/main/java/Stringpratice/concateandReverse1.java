@@ -23,6 +23,19 @@ public class concateandReverse1 {
 	public static void main(String[] args) {
 		concateandReverse();
 
+		int count = 0;
+		for (int i = 0; i <= 5; i++) {
+			if (i == 3) {
+				count = count + i;
+				break;
+			} else {
+				count = count + i;
+
+			}
+
+		}
+
+		System.out.println("Total count is:  " + count);
 	}
 
 }
