@@ -60,7 +60,7 @@ public class mapExercise1 {
 
 	public static void main(String[] args) {
 		prog_count_numberword_string1();
-		// prog_count_numberword_string2();
+		prog_count_numberword_string2();
 	}
 
 }

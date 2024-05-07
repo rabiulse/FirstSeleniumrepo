@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLConnection;
 import java.util.Iterator;
 import java.util.List;
 
@@ -50,11 +51,13 @@ public class brokenLinks {
 			try {
 				huc = (HttpURLConnection) (new URL(url).openConnection());
 
-				huc.setRequestMethod("HEAD");
+				URLConnection huc1 = (new URL(url).openConnection());
 
-				huc.connect();
+				((HttpURLConnection) huc1).setRequestMethod("HEAD");
 
-				respCode = huc.getResponseCode();
+				huc1.connect();
+
+				respCode = ((HttpURLConnection) huc1).getResponseCode();
 
 				if (respCode >= 400) {
 					System.out.println(url + " is a broken link" + respCode);

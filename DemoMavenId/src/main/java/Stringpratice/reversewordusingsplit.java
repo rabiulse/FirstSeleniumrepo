@@ -37,7 +37,7 @@ public class reversewordusingsplit {
 			reverse = reverse + original.charAt(i);
 		}
 
-		System.out.println("Enter your string value:" + reverse);
+		System.out.println("reverse string :" + reverse);
 
 	}
 

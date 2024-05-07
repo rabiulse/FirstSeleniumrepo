@@ -76,6 +76,7 @@ public class removeduplicateChar {
 			set.add(str.charAt(i));
 
 		}
+		System.out.println("The output from 4th1 approach: " + set);
 // Then character Set to String conversion 
 		for (Character c : set) {
 			sb4.append(c);

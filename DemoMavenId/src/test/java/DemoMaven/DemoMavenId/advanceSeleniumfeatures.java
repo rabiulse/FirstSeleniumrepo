@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 public class advanceSeleniumfeatures {
 	static WebDriver driver;
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void opennewwindow() {
 		System.out.println("Create the browser ");
 		System.setProperty("webdriver.chrome.drive",
@@ -23,6 +23,9 @@ public class advanceSeleniumfeatures {
 
 		// Opens BrowserStack homepage in the newly opened window
 		driver.navigate().to("https://www.browserstack.com/");
+		String gettile = driver.getTitle();
+		System.out.println("get titile : " + gettile);
+		driver.quit();
 
 	}
 
@@ -48,7 +51,7 @@ public class advanceSeleniumfeatures {
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void popupAuthentication() {
 		System.out.println("Create the browser ");
 		Reporter.log("Browser Opened");

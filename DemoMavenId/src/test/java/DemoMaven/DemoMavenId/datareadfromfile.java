@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 public class datareadfromfile {
 	String path = "C:\\Users\\rabiu\\git\\repository\\DemoMavenId\\src\\test\\resources\\Data.properties";
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	void dataReadfromfileusingScanner() throws IOException {
 
 		FileInputStream fis = new FileInputStream(path);
@@ -25,7 +25,7 @@ public class datareadfromfile {
 
 	}
 
-	@Test
+	@Test(enabled = false)
 	void dataReadfromfileusingBufferedReaader() throws IOException {
 		String path = "C:\\Users\\rabiu\\git\\repository\\DemoMavenId\\src\\test\\resources\\Data.properties";
 

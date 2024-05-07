@@ -41,8 +41,8 @@ public class SeleniumPractice {
 		// implecitWait();
 		// checkboxexample();
 
-		// readdatafromPropertiesfile();
-		fileUploadTest();
+		readdatafromPropertiesfile();
+		// fileUploadTest();
 		// explicitWait();
 		// FluentWaitPractise();
 		// javascriptexecutor();
@@ -140,7 +140,7 @@ public class SeleniumPractice {
 
 		FileOutputStream fos = new FileOutputStream(file);
 
-		prop.setProperty("TestData", "345678");
+		prop.setProperty("TestData1", "3456783");
 		prop.store(fos, "This is the example of added data");
 
 		String TestData = prop.getProperty("TestData");

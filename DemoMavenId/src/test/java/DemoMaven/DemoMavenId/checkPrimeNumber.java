@@ -5,7 +5,7 @@ import java.util.Scanner;
 import org.testng.annotations.Test;
 
 public class checkPrimeNumber {
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void primenumber() {
 
 		Scanner s = new Scanner(System.in);
@@ -38,11 +38,11 @@ public class checkPrimeNumber {
 
 	}
 
-	@Test
+	@Test(enabled = false)
 	void printnumberbetweentwonumber() {
 
-		int k = (int) Math.sqrt(5);
-		System.out.println(k + " : value of K");
+		// int k = (int) Math.sqrt(5);
+		// System.out.println(k + " : value of K");
 		Scanner s = new Scanner(System.in);
 		System.out.print("Enter the first number : ");
 		int start = s.nextInt();

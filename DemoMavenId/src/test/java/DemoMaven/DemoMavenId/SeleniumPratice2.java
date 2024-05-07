@@ -74,11 +74,6 @@ public class SeleniumPratice2 {
 
 		driver.get("https://demo.guru99.com/test/cookie/selenium_aut.php");
 
-		// Input Email id and Password If you are already Register
-		driver.findElement(By.name("username")).sendKeys("abc123");
-		driver.findElement(By.name("password")).sendKeys("123xyz");
-		driver.findElement(By.name("submit")).click();
-
 		// create file named Cookies to store Login Information
 		File file = new File("Cookies.data");
 		try {
