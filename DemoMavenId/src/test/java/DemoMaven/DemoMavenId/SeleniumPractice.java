@@ -171,6 +171,7 @@ public class SeleniumPractice {
 	public static void handleNotification() {
 		ChromeOptions option = new ChromeOptions();
 		option.addArguments("--disable-notification");
+		// option.setAcceptInsecureCerts(false);
 		WebDriver driver = new ChromeDriver(option);
 		driver.get("https://www.justdial.com/");
 		driver.manage().window().maximize();

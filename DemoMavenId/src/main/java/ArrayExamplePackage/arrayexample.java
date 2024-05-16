@@ -7,27 +7,51 @@ import java.util.List;
 import java.util.Set;
 
 public class arrayexample {
-
+// Example of array and it element: 
 	static void arraexample() {
-		int[] array = new int[] { 2, 5, 3, 4 };
+
+		// Initialization of Integer array
+		int[] array = new int[] { 2, 5, 3, 4, 7 };
+		int[] array1 = new int[] { 2, 5, 3, 4, 3, 8, 9 };
+
+		List<int[]> result3 = Arrays.asList(array1);
+		System.out.print(result3);
+		for (int i = 0; i < result3.size(); i++) {
+			System.out.print(result3.get(i));
+		}
+		System.out.println(" --------------");
 
 		for (int j = 0; j < array.length; j++)
 
 		{
-			System.out.print(array[j] + " ");
+			System.out.print(array[j] + " - ");
 		}
 
 		System.out.println(" ||||| ");
-		char[] chararray = new char[] { '5', 'r', 'y', 't' };
+
+		// Initialization of character array..
+
+		char[] chararray = new char[] { '9', '5', 'r', 'y', 't', 'a' };
+
+		char[] result1 = Arrays.copyOf(chararray, 10);
+
+		System.out.println("Integer Array of copied " + Arrays.toString(result1));
+
+		int result = Arrays.compare(array, array1);
+		System.out.println("result of two array :" + result);
 
 		System.out.print("Print and display the array element: " + Arrays.toString(chararray) + "\n");
-		List<String> list24 = new ArrayList<String>();
-		Arrays.sort(chararray);
 
+		Arrays.sort(chararray);
+		int value = Arrays.binarySearch(array, 7);
+		System.out.println(" Value of Binary serach: " + value);
+
+		System.out.println("Print and display the sorted  array element: ");
 		for (int j = 0; j < chararray.length; j++)
 
 		{
 			System.out.print(chararray[j] + " ");
+
 		}
 
 		List<String> list1 = new ArrayList<>(2);
@@ -39,7 +63,18 @@ public class arrayexample {
 		System.out.print("\n Arralist with Duplicate:  " + list1 + "\n");
 
 		String[] arr = new String[list1.size()];
-		arr = list1.toArray(arr);
+
+		// converting the array using the get method:
+		for (int i = 0; i < list1.size(); i++) {
+			arr[i] = list1.get(i);
+
+		}
+		System.out.println("Converting the list to array:");
+		for (String str : arr) {
+			System.out.print(str + " ");
+		}
+
+		// System.out.println("Converting the list to array:" + arr);
 
 		System.out.print("\nconvert array list to Array:  " + arr + "\n");
 
@@ -151,9 +186,9 @@ public class arrayexample {
 	}
 
 	public static void main(String[] args) {
-		arraexample();
-		listToArray();
-		ArrayToList();
+		// arraexample();
+		// listToArray();// Conversion of List to Array element:
+		ArrayToList();// Conversion of array element to List:
 
 	}
 

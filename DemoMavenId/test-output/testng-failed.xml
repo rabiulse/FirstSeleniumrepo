@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="DemoMaven.DemoMavenId.fileUploadTest">
+      <class name="DemoMaven.DemoMavenId.advanceSeleniumfeatures">
         <methods>
-          <include name="fileUploadTest"/>
+          <include name="popupAuthentication"/>
         </methods>
-      </class> <!-- DemoMaven.DemoMavenId.fileUploadTest -->
+      </class> <!-- DemoMaven.DemoMavenId.advanceSeleniumfeatures -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

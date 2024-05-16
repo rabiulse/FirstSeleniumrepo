@@ -8,16 +8,20 @@ import org.testng.annotations.Test;
 public class Arrayexercise2 {
 	@Test
 	public void array1() {
-		int array[] = { 4, 98, 6, 7, 9 };
-//Approach #1
+		int array[] = { 4, 98, 6, 7, 9, 2 };
+		// Approach #1
+
+		int ndlargest;
 		OptionalInt test = Arrays.stream(array).distinct().sorted().skip(1).findFirst();
 
-		System.out.println(test);
+		System.out.println("2nd largest : " + test);
 
 		Arrays.sort(array);
 
 		System.out.println("2nd approach: ");
+
 		// Approach #2
+
 		int Secondlargets = array[2];
 
 		System.out.println(Secondlargets + ":  2nd largest");
