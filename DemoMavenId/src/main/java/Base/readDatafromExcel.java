@@ -35,11 +35,11 @@ public class readDatafromExcel {
 		System.out.println(colcount);
 
 		for (int rows = 0; rows <= rowscount; rows++) {
-			HSSFRow rows1 = sheets.getRow(rows);
+			// HSSFRow rows1 = sheets.getRow(rows);
 
 			for (int c = 0; c < colcount; c++) {
 
-				HSSFCell cell1 = rows1.getCell(c);
+				HSSFCell cell1 = sheets.getRow(rows).getCell(c);
 
 				switch (cell1.getCellType()) {
 				case STRING:

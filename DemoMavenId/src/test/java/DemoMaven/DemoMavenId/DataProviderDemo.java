@@ -1,5 +1,6 @@
 package DemoMaven.DemoMavenId;
 
+import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -11,6 +12,7 @@ public class DataProviderDemo {
 	public void loginTest(String username, String password) {
 
 		System.out.println("Username is : " + username + " and Passord is :" + password);
+		Reporter.log("Test Case executed successfully with username: " + username + "and Password: " + password);
 	}
 
 	// data supplier method

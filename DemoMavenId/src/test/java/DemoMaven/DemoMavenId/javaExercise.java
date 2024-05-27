@@ -71,7 +71,7 @@ public class javaExercise {
 
 	public static void main(String[] args) {
 		reverseString();
-		// swapTwoString();
+		swapTwoString();
 		// sumofintegervalue();
 		// checkprimenumber();
 

@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="DemoMaven.DemoMavenId.advanceSeleniumfeatures">
+      <class name="DemoMaven.DemoMavenId.Webtable">
         <methods>
-          <include name="popupAuthentication"/>
+          <include name="webtableTest"/>
         </methods>
-      </class> <!-- DemoMaven.DemoMavenId.advanceSeleniumfeatures -->
+      </class> <!-- DemoMaven.DemoMavenId.Webtable -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

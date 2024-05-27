@@ -7,6 +7,7 @@ import java.util.Properties;
 
 //Class of ReverseString
 class JavaStringPractice {
+
 	public static void main(String[] args) throws IOException {
 		String input = "Rabiul";
 		reverseString();

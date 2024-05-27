@@ -30,7 +30,7 @@ public class advanceSeleniumfeatures {
 
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void opennewTab() {
 		System.out.println("Create the browser ");
 		Reporter.log("Browser Opened");
@@ -52,7 +52,7 @@ public class advanceSeleniumfeatures {
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void popupAuthentication() {
 		System.out.println("Create the browser ");
 		Reporter.log("Browser Opened");

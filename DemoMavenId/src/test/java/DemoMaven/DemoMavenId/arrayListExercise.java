@@ -32,10 +32,10 @@ public class arrayListExercise {
 
 		System.out.println(arrayList);
 
-		Set<String> setexample = new HashSet<String>(arrayList);
+		Set<String> setexample = new HashSet<String>();
 
-		// setexample.addAll(arrayList);
-		System.out.println(setexample);
+		setexample.addAll(arrayList);
+		// System.out.println(setexample);
 
 		for (String value : setexample) {
 			System.out.print(":" + value);
@@ -64,6 +64,7 @@ public class arrayListExercise {
 		arraylist2.add("ha");
 		arraylist2.add("uzzamandg");
 		arraylist2.add("nehan");
+		arraylist2.add("nehan");
 
 		System.out.println("ArrayList: " + arraylist2);
 		Collections.reverse(arraylist2);
@@ -76,7 +77,7 @@ public class arrayListExercise {
 
 			{
 				arraylist2.remove(i);
-				System.out.println("ArrayList: " + arraylist2);
+				// System.out.println("ArrayList: " + arraylist2);
 			}
 
 		}

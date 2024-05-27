@@ -25,7 +25,7 @@ class collectionsAndCollection {
 
 		// Adding all the specified elements
 		// to the specified collection
-		Collections.addAll(arrlist, "web", "site", "rabiul");
+		Collections.addAll(arrlist, "web", "site", "rabiul", "rabiu");
 
 		// Printing the arrlist after
 		// performing addAll() method

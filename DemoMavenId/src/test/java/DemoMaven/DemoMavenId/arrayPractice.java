@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class arrayPractice {
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	private static void find_third_largest_number() {
 
 		int[] array = new int[] { 4, 7, 5, 8, 3, 98, 56, 89 };

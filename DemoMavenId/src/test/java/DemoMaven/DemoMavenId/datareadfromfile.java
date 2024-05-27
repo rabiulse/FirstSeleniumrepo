@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 public class datareadfromfile {
 	String path = "C:\\Users\\rabiu\\git\\repository\\DemoMavenId\\src\\test\\resources\\Data.properties";
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	void dataReadfromfileusingScanner() throws IOException {
 
 		FileInputStream fis = new FileInputStream(path);
@@ -25,19 +25,19 @@ public class datareadfromfile {
 
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	void dataReadfromfileusingBufferedReaader() throws IOException {
 		String path = "C:\\Users\\rabiu\\git\\repository\\DemoMavenId\\src\\test\\resources\\Data.properties";
-
-		BufferedReader br = new BufferedReader(new FileReader(path));
-		// Declaring a new string
+		FileReader fr = new FileReader(path);
+		BufferedReader br = new BufferedReader(fr);
+		// BufferedReader br = new BufferedReader(new FileReader(path));
+		// Declaring a nebrw string
 		String str;
 
 		// It holds true till there is content in file
 		while ((str = br.readLine()) != null) {
 
-			// Printing the file data
-			System.out.println(br);
+			System.out.println(str);
 		}
 
 	}

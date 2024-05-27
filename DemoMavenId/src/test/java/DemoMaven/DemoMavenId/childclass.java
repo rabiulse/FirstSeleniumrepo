@@ -1,6 +1,6 @@
 package DemoMaven.DemoMavenId;
 
-public class cliendclass extends parentClass {
+public class childclass extends parentClass {
 
 	@Override
 	void m1() {
@@ -11,7 +11,7 @@ public class cliendclass extends parentClass {
 
 	public static void main(String[] args) {
 
-		parentClass ex = new cliendclass();
+		parentClass ex = new childclass();
 		ex.m1();
 
 	}
