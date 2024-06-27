@@ -27,7 +27,8 @@ public class datareadfromfile {
 
 	@Test(enabled = true)
 	void dataReadfromfileusingBufferedReaader() throws IOException {
-		String path = "C:\\Users\\rabiu\\git\\repository\\DemoMavenId\\src\\test\\resources\\Data.properties";
+		// String path =
+		// "C:\\Users\\rabiu\\git\\repository\\DemoMavenId\\src\\test\\resources\\Data.properties";
 		FileReader fr = new FileReader(path);
 		BufferedReader br = new BufferedReader(fr);
 		// BufferedReader br = new BufferedReader(new FileReader(path));

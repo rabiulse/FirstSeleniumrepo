@@ -109,7 +109,7 @@ public class JavaString1Pratice {
 	public static void createStringObject() {
 		// create the character array object variable:
 		char[] araay_num = new char[] { '1', '2', '3', 'R' };
-		String str = String.copyValueOf(araay_num, 0, 3);
+		String str = String.copyValueOf(araay_num, 0, 4);
 		System.out.println(str);
 
 	}

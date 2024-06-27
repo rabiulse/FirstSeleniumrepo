@@ -1,28 +1,7 @@
 package Stringpratice;
 
-public class wrapperClassexample {
-
-	static void autoboxingexample() {
-		int a = 20;
-		Integer i = Integer.valueOf(a);//
-		Integer j = a;// Convert the int promotive to wrapper class// autoboxing,
-
-		int b = i; // Unboxing - here converting wrapper class to primitive class
-		System.out.println("Convering Wrapper to Promitive: " + b);
-
-		System.out.println("value of a:" + a + "\nvalue of i:" + i + "\n" + "Value of J:" + j);
-
-	}
-
-	static void unboxingexample() {
-		// Converting Integer to int
-		Integer a = new Integer(3);
-		int i = a.intValue();// converting Integer to int explicitly
-		int j = a;// unboxing, now compiler will write a.intValue() internally
-
-		System.out.println(a + " " + i + " " + j);
-
-	}
+public class stringmethodwithexample {
+//https://www.w3schools.com/java/java_ref_string.asp
 
 	static void stringmethodexample() {
 
@@ -34,6 +13,7 @@ public class wrapperClassexample {
 		int testvalue2 = str.codePointBefore(4);
 
 		int testvalue3 = str.codePointCount(0, 8);
+
 //		Compare To Method in String 
 		int result1 = str.compareTo(str1);
 		int result2 = str.compareToIgnoreCase(str1);
@@ -49,7 +29,7 @@ public class wrapperClassexample {
 		System.out.println("result3 : " + result3);
 		System.out.println("result4 : " + result4);
 
-		// concat operation on String:
+		// concate operation on String:
 
 		String result5 = str.concat(str1);
 
@@ -76,13 +56,25 @@ public class wrapperClassexample {
 
 		System.out.println("result9 : " + result9);
 
+		// Java String endsWith() and startsWith() Method
+
+		boolean result10 = str.endsWith("UzZaman");
+
+		System.out.println("result10 : " + result10);
+
+		boolean result11 = str.startsWith("Rabiul");
+
+		System.out.println("result11 : " + result11);
+
+		// Java String format() Method
+
+		String result12 = String.format(str, "world", "1024");
+
+		System.out.println("result12 : " + result12);
+
 	}
 
 	public static void main(String[] args) {
-		// autoboxingexample();
-		// unboxingexample();
-
-		// System.out.println('a' + 'a');
 
 		stringmethodexample();
 

@@ -69,7 +69,7 @@ public class arrayexample {
 			arr[i] = list1.get(i);
 
 		}
-		System.out.println("Converting the list to array:");
+		System.out.println("Converting the list to  array of string:");
 		for (String str : arr) {
 			System.out.print(str + " ");
 		}
@@ -186,9 +186,9 @@ public class arrayexample {
 	}
 
 	public static void main(String[] args) {
-		// arraexample();
+		arraexample();
 		// listToArray();// Conversion of List to Array element:
-		ArrayToList();// Conversion of array element to List:
+		// ArrayToList();// Conversion of array element to List:
 
 	}
 

@@ -213,6 +213,7 @@ public class SeleniumPractice {
 		}
 
 		driver.findElement(By.className("dropbtn")).click();
+		// WebElement facebook = wait.until(ExpectedConditions.visi
 		WebElement facebook = wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Facebook")));
 		WebElement facebook1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Test")));
 		facebook.click();
