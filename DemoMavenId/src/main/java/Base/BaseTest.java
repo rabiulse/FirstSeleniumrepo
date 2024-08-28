@@ -25,8 +25,7 @@ public class BaseTest {
 	public void lunchUrl() throws IOException {
 		// final org.apache.logging.log4j.Logger logger = LogManager.getLogger();
 		System.out.println("Create the browser ");
-		System.setProperty("webdriver.chrome.drive",
-				"C:\\Users\\rabiu\\OneDrive\\Documents\\ChromeDriver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.drive", "C:\\Users\\rabiu\\OneDrive\\ChromeDriver\\chromedriver.exe");
 		this.driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();

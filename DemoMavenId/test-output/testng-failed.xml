@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="DemoMaven.DemoMavenId.Webtable">
+      <class name="DemoMaven.DemoMavenId.IframeTest">
         <methods>
-          <include name="webtableTest"/>
+          <include name="IframeTest"/>
         </methods>
-      </class> <!-- DemoMaven.DemoMavenId.Webtable -->
+      </class> <!-- DemoMaven.DemoMavenId.IframeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

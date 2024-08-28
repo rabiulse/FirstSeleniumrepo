@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SampleSuitName]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="IframeTest(failed)">
+    <classes>
+      <class name="DemoMaven.DemoMavenId.IframeTest">
+        <methods>
+          <include name="IframeTest"/>
+        </methods>
+      </class> <!-- DemoMaven.DemoMavenId.IframeTest -->
+    </classes>
+  </test> <!-- IframeTest(failed) -->
+  <test thread-count="5" name="keyPressTest(failed)">
+    <classes>
+      <class name="DemoMaven.DemoMavenId.keyPressTest">
+        <methods>
+          <include name="KeyPressTest"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- DemoMaven.DemoMavenId.keyPressTest -->
+    </classes>
+  </test> <!-- keyPressTest(failed) -->
+  <test thread-count="5" name="fileUploadTest(failed)">
+    <classes>
+      <class name="DemoMaven.DemoMavenId.fileUploadTest">
+        <methods>
+          <include name="fileUploadTest"/>
+        </methods>
+      </class> <!-- DemoMaven.DemoMavenId.fileUploadTest -->
+    </classes>
+  </test> <!-- fileUploadTest(failed) -->
+  <test thread-count="5" name="NegativeLogInTests(failed)">
+    <classes>
+      <class name="DemoMaven.DemoMavenId.NegativeLogInTests">
+        <methods>
+          <include name="negativeLogInTest" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- DemoMaven.DemoMavenId.NegativeLogInTests -->
+    </classes>
+  </test> <!-- NegativeLogInTests(failed) -->
+  <test thread-count="5" name="checkboxTest(failed)">
+    <classes>
+      <class name="DemoMaven.DemoMavenId.checkboxTest">
+        <methods>
+          <include name="checkboxTest"/>
+        </methods>
+      </class> <!-- DemoMaven.DemoMavenId.checkboxTest -->
+    </classes>
+  </test> <!-- checkboxTest(failed) -->
+  <test thread-count="5" name="dropdownTest(failed)">
+    <classes>
+      <class name="DemoMaven.DemoMavenId.dropdownTest">
+        <methods>
+          <include name="dropdownTest"/>
+        </methods>
+      </class> <!-- DemoMaven.DemoMavenId.dropdownTest -->
+    </classes>
+  </test> <!-- dropdownTest(failed) -->
+  <test thread-count="5" name="JavaScriptAlert(failed)">
+    <classes>
+      <class name="DemoMaven.DemoMavenId.JavaScriptAlert">
+        <methods>
+          <include name="AlertTest"/>
+        </methods>
+      </class> <!-- DemoMaven.DemoMavenId.JavaScriptAlert -->
+    </classes>
+  </test> <!-- JavaScriptAlert(failed) -->
+  <test thread-count="5" name="advanceSeleniumfeatures(failed)">
+    <classes>
+      <class name="DemoMaven.DemoMavenId.advanceSeleniumfeatures">
+        <methods>
+          <include name="opennewTab"/>
+        </methods>
+      </class> <!-- DemoMaven.DemoMavenId.advanceSeleniumfeatures -->
+    </classes>
+  </test> <!-- advanceSeleniumfeatures(failed) -->
+</suite> <!-- Failed suite [SampleSuitName] -->

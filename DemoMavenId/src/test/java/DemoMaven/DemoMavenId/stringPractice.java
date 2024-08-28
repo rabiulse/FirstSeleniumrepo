@@ -14,6 +14,7 @@ import Base.Log;
 public class stringPractice {
 
 	public static void main(String[] args) {
+		test();
 		// Program #1 to find out the largest number
 		// arraypractise();// find the duplicate value is given array and store then in
 		// list
@@ -48,7 +49,7 @@ public class stringPractice {
 		// print_number_of_elements_array();
 		// print_sum_all_items_array();
 		// right_rotate_element();
-		sort_ascending_order();
+		// sort_ascending_order();
 		// sort_descending_order();
 		// find_third_largest_number();
 		// remove_duplicate_element_array();
@@ -66,6 +67,15 @@ public class stringPractice {
 		for (int i = 0; i < length; i++) {
 			System.out.print(arr[i] + " ");
 		}
+
+	}
+
+	private static void test() {
+
+		int x = 10;
+		// int y= ++(++x);
+
+		// System.out.printf(y);
 
 	}
 
