@@ -40,7 +40,7 @@ public class printfibonacciseriew {
 		int i;
 		i = Integer.parseInt(str1);// convertering the string to interger:
 		System.out.println(i + ": is value of I");
-
+		System.out.println(str1 + " This is string example");
 		String str2;
 		str2 = String.valueOf(i);
 		System.out.println(str2 + " : String converted from integer to sting:");

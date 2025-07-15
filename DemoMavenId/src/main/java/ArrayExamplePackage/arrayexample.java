@@ -187,8 +187,8 @@ public class arrayexample {
 
 	public static void main(String[] args) {
 		arraexample();
-		// listToArray();// Conversion of List to Array element:
-		// ArrayToList();// Conversion of array element to List:
+		listToArray();// Conversion of List to Array element:
+		ArrayToList();// Conversion of array element to List:
 
 	}
 

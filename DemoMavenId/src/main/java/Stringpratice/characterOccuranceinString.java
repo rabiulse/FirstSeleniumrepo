@@ -6,7 +6,7 @@ import java.util.Map;
 public class characterOccuranceinString {
 
 	public static void main(String[] args) {
-		String str = "Helllooo";
+		String str = "Helllooodf";
 
 		char[] chararray = str.toCharArray();
 		Map<Character, Integer> map = new HashMap<>();
