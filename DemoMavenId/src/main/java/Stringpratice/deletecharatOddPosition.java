@@ -5,13 +5,13 @@ public class deletecharatOddPosition {
 	void deletecharatOddPosition1() {
 
 		String s1 = "Rabiulsd34";
-		System.out.println(s1);
+		System.out.println("Original String : " + s1);
 
 		char[] chararray = s1.toCharArray();
 
 		char[] newcharArray;
 
-		System.out.println(chararray);
+		System.out.println("after deleting the odd position : ");
 		for (int i = 1; i < chararray.length; i = i + 2) {
 			// extract the odd position element and print it to console
 			System.out.print(chararray[i]);

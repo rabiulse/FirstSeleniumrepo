@@ -7,7 +7,7 @@ public class removeduplicateChar {
 
 	// Approach#1:
 	static void removeduplicate1() {
-		String str = "Programminggggg";
+		String str = "firstProgramminggggg";
 		StringBuilder sb1 = new StringBuilder();
 
 		str.chars().distinct().forEach(c -> sb1.append((char) c));
@@ -17,7 +17,7 @@ public class removeduplicateChar {
 
 	// Approach #2
 	static void removeduplicate2() {
-		String str = "Programminggggg";
+		String str = "secondProgramminggggg";
 		StringBuilder sb2 = new StringBuilder();
 
 		for (int i = 0; i < str.length(); i++) {
@@ -37,7 +37,7 @@ public class removeduplicateChar {
 	// Approach #3:
 
 	static void removeduplicate3() {
-		String str = "Programminggggg";
+		String str = "thirdProgramminggggg";
 		StringBuilder sb3 = new StringBuilder();
 
 		char[] arra = str.toCharArray();
@@ -67,7 +67,7 @@ public class removeduplicateChar {
 	// Approach#4:
 
 	static void removeduplicate4() {
-		String str = "Programminggggg";
+		String str = "fourthProgramminggggg";
 		StringBuilder sb4 = new StringBuilder();
 
 		Set<Character> set = new LinkedHashSet<Character>();
