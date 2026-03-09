@@ -51,7 +51,7 @@
   
     <test thread-count="1" name="WebTableTest">
 	  <classes>
-			<class name="DemoMaven.DemoMavenId.webtableTest"/>
+			<class name="DemoMaven.DemoMavenId.Webtable"/>
 		</classes>
   </test> <!-- Test -->
   
