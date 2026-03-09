@@ -3,18 +3,25 @@ package DemoMaven.DemoMavenId;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Properties;
 
 public class JavaString1Pratice {
 
 	public static void main(String[] args) throws IOException {
 		reverseString();
+		reverseStringusigstrem();
+		Duplicatecharacter();
+		CountCharacter();
 		removewhiteSpace();
 		getdataFromPropertyFile();
 
 		searchCharacter();
 		comparetwoString();
 		createStringObject();
+		fibonaaciSeries();
+		RemoveDuplicateFromArray();
 	}
 
 	// String reverse Coding in java
@@ -31,6 +38,85 @@ public class JavaString1Pratice {
 		}
 
 		System.out.println();
+	}
+
+	// Fibonacci Series
+	public static void fibonaaciSeries() {
+
+		int n1 = 0, n2 = 1, n3;
+
+		System.out.print(n1 + " " + n2);
+
+		for (int i = 2; i < 10; i++) {
+			n3 = n1 + n2;
+			System.out.print(" " + n3);
+			n1 = n2;
+			n2 = n3;
+		}
+		System.out.println();
+	}
+
+	// Remove Duplicates from Array
+
+	public static void RemoveDuplicateFromArray() {
+
+		Integer[] arr = { 1, 2, 3, 2, 4, 3, 5 };
+
+		System.out.println("Original Array" + Arrays.asList(arr));
+		System.out.print("Original List : ");
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(" " + arr[i]);
+
+		}
+		System.out.println();
+
+		HashSet<Integer> set = new HashSet<>(Arrays.asList(arr));
+		System.out.println("After removing the duplicate  :" + set);
+
+	}
+
+	// String reverse Coding in java using Stream
+	private static void reverseStringusigstrem() {
+
+		String input = "Selenieuem";
+		String rev = "";
+		rev = new StringBuilder(input).reverse().toString();
+
+		System.out.println("The input :" + input + " And  Reverse is:" + rev);
+
+	}
+
+	// Specific character count from String:
+	private static void CountCharacter() {
+
+		String str = "Selenieuem";
+		char ch = 'e';
+		int count = 0;
+
+		for (int i = 0; i < str.length(); i++) {
+			if (str.charAt(i) == ch) {
+				count++;
+			}
+		}
+
+		System.out.println("Count of e in Selenium:" + count);
+
+	}
+
+	// Find the duplicate character in a Given String:
+
+	private static void Duplicatecharacter() {
+
+		String str = "Seleniuuimm";
+		HashSet<Character> set = new HashSet<>();
+		for (char ch : str.toCharArray()) {
+			if (!set.add(ch)) {
+
+				System.out.println("Duplicate Character:" + ch);
+			}
+
+		}
+
 	}
 
 	// remove the white space from given String:

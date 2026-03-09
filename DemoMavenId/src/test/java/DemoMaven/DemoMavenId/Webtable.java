@@ -3,33 +3,24 @@ package DemoMaven.DemoMavenId;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class Webtable {
-	static WebDriver driver;
-	/*
-	 * 
-	 * url-https://seleniumpractise.blogspot.com/2021/08/webtable-in-html.html first
-	 * identify the table column: //table[@Id='customers']//th- table column /
-	 * //table[@Id='customers']//tr- table row // // //table[@Id='customers']//td-
-	 * table all data //table[@Id='customers']//tr//td[4]- fourth column value
-	 * 
-	 * //td[text()='Selenium']//preceding-sibling::td//input
-	 * //td[text()='Ola']//following-sibling::td//a - anchor tab
-	 */
 
 	@Test
 	public void webtableTest() {
 
 		System.out.println("Create the browser ");
-		System.setProperty("webdriver.chrome.drive",
-				"C:\\Users\\rabiu\\OneDrive\\Documents\\ChromeDriver\\chromedriver.exe");
-		driver = new ChromeDriver();
+
+		WebDriverManager.chromedriver().setup();
+		ChromeDriver driver = new ChromeDriver();
+
 		driver.manage().window().maximize();
 		driver.get("https://seleniumpractise.blogspot.com/2021/08/webtable-in-html.html");
 
@@ -40,6 +31,7 @@ public class Webtable {
 		int columnSize = allcolumnHeader.size();
 
 		Assert.assertEquals(columnSize, 5, "Column size is not match with expected");
+		System.out.println("columnSize : " + columnSize);
 
 		Reporter.log("columnSize : " + columnSize);
 
