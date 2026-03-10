@@ -9,8 +9,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
-import Base.Log;
-
 public class stringPractice {
 
 	public static void main(String[] args) {
@@ -770,7 +768,7 @@ public class stringPractice {
 
 	// How to split a string into a number of substrings in Java
 	private static void SplitString() {
-		Log.info("Split String test");
+
 		String str = "jan:feb:march12:test";
 		String[] str1 = str.split(":");
 

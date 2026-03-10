@@ -7,7 +7,6 @@ import java.util.NoSuchElementException;
 import java.util.Set;
 
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -17,8 +16,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import Base.Log;
 
 public class BasePageObject {
 
@@ -97,15 +94,6 @@ public class BasePageObject {
 			return false;
 		}
 		return true;
-	}
-
-	/** Wait for alert present and then switch to it */
-	protected Alert switchToAlert() {
-		// WebDriverWait wait = new WebDriverWait(driver, 5);
-		// wait.until(ExpectedConditions.alertIsPresent());
-		Log.info("My Account link element found");
-		return driver.switchTo().alert();
-
 	}
 
 	public void switchToWindowWithTitle(String expectedTitle) {

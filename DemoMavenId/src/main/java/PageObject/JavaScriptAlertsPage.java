@@ -35,32 +35,31 @@ public class JavaScriptAlertsPage extends WelcomePageObject {
 		click(clickForJSPromptButtonLocator);
 	}
 
-	/** Switch to alert and get it's message */
-	public String getAlertText() {
-		Alert alert = switchToAlert();
-		String alertText = alert.getText();
-		log.info("Alert says: " + alertText);
-		return alertText;
-	}
-
 	/** Switch to alert and press OK */
 	public void acceptAlert() {
 		log.info("Switching to alert and pressing OK");
-		Alert alert = switchToAlert();
+		Alert alert = driver.switchTo().alert();
 		alert.accept();
+	}
+
+	public String getAlertText() {
+		log.info("Switching to alert and pressing OK");
+		Alert alert = driver.switchTo().alert();
+		String result = alert.getText();
+		return result;
 	}
 
 	/** Switch to alert and press Cancel */
 	public void dismissAlert() {
 		log.info("Switching to alert and pressing Cancel");
-		Alert alert = switchToAlert();
+		Alert alert = driver.switchTo().alert();
 		alert.dismiss();
 	}
 
 	/** Type text into alert and press OK */
 	public void typeTextIntoAlert(String text) {
 		log.info("Typing text into alert and pressing OK");
-		Alert alert = switchToAlert();
+		Alert alert = driver.switchTo().alert();
 		alert.sendKeys(text);
 		alert.accept();
 	}

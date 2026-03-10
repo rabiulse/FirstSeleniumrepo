@@ -5,7 +5,6 @@ import java.io.IOException;
 import org.testng.annotations.Test;
 
 import Base.BaseTest;
-import Base.Log;
 import Base.TestUtilities;
 import PageObject.IframPageObject;
 
@@ -19,7 +18,7 @@ public class IframeTest extends TestUtilities {
 		IframPageObject Iframe = new IframPageObject();
 		base.lunchUrl();
 		Iframe.ClickOnIframeEditor();
-		Log.info("Testinformation: ");
+
 		Iframe.verifyTextonIframe();
 		sleep(12);
 		base.TearDown();

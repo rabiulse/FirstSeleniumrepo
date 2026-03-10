@@ -2,6 +2,7 @@ package Base;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -21,11 +22,6 @@ public class TestListner implements ITestListener {
 	public void onTestSuccess(ITestResult result) {
 		log.info("[Test " + testMethodName + " passed]");
 
-	}
-
-	@Override
-	public void onTestFailure(ITestResult result) {
-		log.info("[Test " + testMethodName + " failed]");
 	}
 
 	@Override
@@ -50,6 +46,16 @@ public class TestListner implements ITestListener {
 	@Override
 	public void onFinish(ITestContext context) {
 		log.info("[ALL " + testName + " FINISHED]");
+	}
+
+	@Override
+	public void onTestFailure(ITestResult result) {
+
+		String testName = result.getName();
+
+		WebDriver driver = BaseTest.driver;
+
+		captureScreenshot.captureScreenshotM(driver, testName);
 	}
 
 }

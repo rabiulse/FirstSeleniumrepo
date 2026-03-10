@@ -24,13 +24,13 @@ public class Webtable {
 		driver.manage().window().maximize();
 		driver.get("https://seleniumpractise.blogspot.com/2021/08/webtable-in-html.html");
 
-		// work on column value
+		// work on column value****************************************************
 
 		List<WebElement> allcolumnHeader = driver.findElements(By.xpath("//table[@Id='customers']//th"));
 
 		int columnSize = allcolumnHeader.size();
 
-		Assert.assertEquals(columnSize, 5, "Column size is not match with expected");
+		Assert.assertEquals(columnSize, 6, "Column size is not match with expected");
 		System.out.println("columnSize : " + columnSize);
 
 		Reporter.log("columnSize : " + columnSize);
@@ -38,6 +38,9 @@ public class Webtable {
 		for (WebElement ele : allcolumnHeader) {
 
 			String colunheadervalue = ele.getText();
+
+			System.out.println("colun header value : " + colunheadervalue);
+
 			boolean flag = false;
 			if (colunheadervalue.contains("Contact")) {
 				flag = true;
@@ -46,7 +49,7 @@ public class Webtable {
 			}
 
 		}
-// All rows
+		// ******************** All rows********************************************
 		System.out.println("---------------------------");
 
 		List<WebElement> allrows = driver.findElements(By.xpath("//table[@Id='customers']//tr"));
@@ -55,16 +58,16 @@ public class Webtable {
 
 		Assert.assertEquals(allrows.size(), 7);
 
-		// All Data
+		// ************************* All Data*************************************
 		System.out.println("---------------------------");
 
 		List<WebElement> alldata = driver.findElements(By.xpath("//table[@Id='customers']//td"));
 		boolean status = false;
 		for (WebElement data : alldata) {
-
 			String tabledata = data.getText();
+			System.out.println("tabledata : " + tabledata);
 			Reporter.log("tabledata : " + tabledata);
-			if (tabledata.contains("Amazon")) {
+			if (tabledata.contains("Java")) {
 				status = true;
 				break;
 

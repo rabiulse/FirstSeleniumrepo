@@ -1,13 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="10" passed="9" failed="1" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[Browser Opened]]>
+    </line>
+    <line>
+      <![CDATA[Browser Maximized]]>
+    </line>
+    <line>
+      <![CDATA[Browser Maximized for browserstack com]]>
+    </line>
   </reporter-output>
-  <suite started-at="2026-03-09T12:18:20 IST" name="Default suite" finished-at="2026-03-09T12:18:25 IST" duration-ms="4747">
+  <suite started-at="2026-03-10T15:32:00 IST" name="SampleSuitName" finished-at="2026-03-10T15:33:17 IST" duration-ms="76365">
     <groups>
     </groups>
-    <test started-at="2026-03-09T12:18:20 IST" name="Default test" finished-at="2026-03-09T12:18:25 IST" duration-ms="4747">
+    <test started-at="2026-03-10T15:32:00 IST" name="IframeTest" finished-at="2026-03-10T15:32:08 IST" duration-ms="8014">
+      <class name="DemoMaven.DemoMavenId.IframeTest">
+        <test-method signature="IframeTest()[pri:0, instance:DemoMaven.DemoMavenId.IframeTest@69e153c5]" started-at="2026-03-10T15:32:01 IST" name="IframeTest" finished-at="2026-03-10T15:32:08 IST" duration-ms="7487" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- IframeTest -->
+      </class> <!-- DemoMaven.DemoMavenId.IframeTest -->
+    </test> <!-- IframeTest -->
+    <test started-at="2026-03-10T15:32:08 IST" name="keyPressTest" finished-at="2026-03-10T15:32:14 IST" duration-ms="6213">
+      <class name="DemoMaven.DemoMavenId.keyPressTest">
+        <test-method signature="KeyPressTest()[pri:0, instance:DemoMaven.DemoMavenId.keyPressTest@642a7222]" started-at="2026-03-10T15:32:08 IST" name="KeyPressTest" finished-at="2026-03-10T15:32:14 IST" duration-ms="6208" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- KeyPressTest -->
+      </class> <!-- DemoMaven.DemoMavenId.keyPressTest -->
+    </test> <!-- keyPressTest -->
+    <test started-at="2026-03-10T15:32:14 IST" name="fileUploadTest" finished-at="2026-03-10T15:32:26 IST" duration-ms="12043">
+      <class name="DemoMaven.DemoMavenId.fileUploadTest">
+        <test-method signature="fileUploadTest()[pri:0, instance:DemoMaven.DemoMavenId.fileUploadTest@4470fbd6]" started-at="2026-03-10T15:32:14 IST" name="fileUploadTest" finished-at="2026-03-10T15:32:26 IST" duration-ms="12036" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fileUploadTest -->
+      </class> <!-- DemoMaven.DemoMavenId.fileUploadTest -->
+    </test> <!-- fileUploadTest -->
+    <test started-at="2026-03-10T15:32:26 IST" name="NegativeLogInTests" finished-at="2026-03-10T15:32:44 IST" duration-ms="17738">
+      <class name="DemoMaven.DemoMavenId.NegativeLogInTests">
+        <test-method signature="negativeLogInTest(java.util.Map)[pri:1, instance:DemoMaven.DemoMavenId.NegativeLogInTests@17503f6b]" started-at="2026-03-10T15:32:27 IST" name="negativeLogInTest" data-provider="csvReader" finished-at="2026-03-10T15:32:36 IST" duration-ms="9294" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{no=1, description=incorrect username, password=SuperSecretPassword!, expectedMessage=Your username is invalid!, username=incorrectUsername}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeLogInTest -->
+        <test-method signature="negativeLogInTest(java.util.Map)[pri:1, instance:DemoMaven.DemoMavenId.NegativeLogInTests@17503f6b]" started-at="2026-03-10T15:32:36 IST" name="negativeLogInTest" data-provider="csvReader" finished-at="2026-03-10T15:32:44 IST" duration-ms="8407" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{no=2, description=incorrect password, password=incorrectPassword, expectedMessage=Your password is invalid!, username=tomsmith}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeLogInTest -->
+      </class> <!-- DemoMaven.DemoMavenId.NegativeLogInTests -->
+    </test> <!-- NegativeLogInTests -->
+    <test started-at="2026-03-10T15:32:44 IST" name="checkboxTest" finished-at="2026-03-10T15:32:54 IST" duration-ms="9970">
+      <class name="DemoMaven.DemoMavenId.checkboxTest">
+        <test-method signature="checkboxTest()[pri:0, instance:DemoMaven.DemoMavenId.checkboxTest@24959ca4]" started-at="2026-03-10T15:32:44 IST" name="checkboxTest" finished-at="2026-03-10T15:32:54 IST" duration-ms="9969" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkboxTest -->
+      </class> <!-- DemoMaven.DemoMavenId.checkboxTest -->
+    </test> <!-- checkboxTest -->
+    <test started-at="2026-03-10T15:32:54 IST" name="dropdownTest" finished-at="2026-03-10T15:32:59 IST" duration-ms="5196">
+      <class name="DemoMaven.DemoMavenId.dropdownTest">
+        <test-method signature="dropdownTest()[pri:0, instance:DemoMaven.DemoMavenId.dropdownTest@7068e664]" started-at="2026-03-10T15:32:54 IST" name="dropdownTest" finished-at="2026-03-10T15:32:59 IST" duration-ms="5193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dropdownTest -->
+      </class> <!-- DemoMaven.DemoMavenId.dropdownTest -->
+    </test> <!-- dropdownTest -->
+    <test started-at="2026-03-10T15:32:59 IST" name="JavaScriptAlert" finished-at="2026-03-10T15:33:05 IST" duration-ms="5588">
+      <class name="DemoMaven.DemoMavenId.JavaScriptAlert">
+        <test-method signature="AlertTest()[pri:0, instance:DemoMaven.DemoMavenId.JavaScriptAlert@64b0598]" started-at="2026-03-10T15:32:59 IST" name="AlertTest" finished-at="2026-03-10T15:33:05 IST" duration-ms="5580" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AlertTest -->
+      </class> <!-- DemoMaven.DemoMavenId.JavaScriptAlert -->
+    </test> <!-- JavaScriptAlert -->
+    <test started-at="2026-03-10T15:33:05 IST" name="advanceSeleniumfeatures" finished-at="2026-03-10T15:33:10 IST" duration-ms="5160">
+      <class name="DemoMaven.DemoMavenId.advanceSeleniumfeatures">
+        <test-method signature="opennewTab()[pri:0, instance:DemoMaven.DemoMavenId.advanceSeleniumfeatures@5038d0b5]" started-at="2026-03-10T15:33:05 IST" name="opennewTab" finished-at="2026-03-10T15:33:10 IST" duration-ms="5157" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Browser Opened]]>
+            </line>
+            <line>
+              <![CDATA[Browser Maximized]]>
+            </line>
+            <line>
+              <![CDATA[Browser Maximized for browserstack com]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- opennewTab -->
+      </class> <!-- DemoMaven.DemoMavenId.advanceSeleniumfeatures -->
+    </test> <!-- advanceSeleniumfeatures -->
+    <test started-at="2026-03-10T15:33:10 IST" name="WebTableTest" finished-at="2026-03-10T15:33:17 IST" duration-ms="6363">
+      <class name="DemoMaven.DemoMavenId.keyPressTest">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:DemoMaven.DemoMavenId.keyPressTest@642a7222]" started-at="2026-03-10T15:33:17 IST" name="afterSuite" finished-at="2026-03-10T15:33:17 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- DemoMaven.DemoMavenId.keyPressTest -->
       <class name="DemoMaven.DemoMavenId.Webtable">
-        <test-method signature="webtableTest()[pri:0, instance:DemoMaven.DemoMavenId.Webtable@75437611]" started-at="2026-03-09T12:18:20 IST" name="webtableTest" finished-at="2026-03-09T12:18:25 IST" duration-ms="4694" status="FAIL">
+        <test-method signature="webtableTest()[pri:0, instance:DemoMaven.DemoMavenId.Webtable@4b8729ff]" started-at="2026-03-10T15:33:10 IST" name="webtableTest" finished-at="2026-03-10T15:33:17 IST" duration-ms="6353" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Column size is not match with expected expected [6] but found [5]]]>
@@ -56,6 +162,6 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </reporter-output>
         </test-method> <!-- webtableTest -->
       </class> <!-- DemoMaven.DemoMavenId.Webtable -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- WebTableTest -->
+  </suite> <!-- SampleSuitName -->
 </testng-results>
