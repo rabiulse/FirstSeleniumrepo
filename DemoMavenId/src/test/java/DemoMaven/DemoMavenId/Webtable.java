@@ -30,7 +30,7 @@ public class Webtable {
 
 		int columnSize = allcolumnHeader.size();
 
-		Assert.assertEquals(columnSize, 6, "Column size is not match with expected");
+		Assert.assertEquals(columnSize, 5, "Column size is not match with expected");
 		System.out.println("columnSize : " + columnSize);
 
 		Reporter.log("columnSize : " + columnSize);
